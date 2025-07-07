@@ -1,39 +1,30 @@
-## Arun Portfolio
+# Modern portfolio design
 
-This is a personal portfolio website built with [Next.js](https://nextjs.org/), [TypeScript](https://www.typescriptlang.org/), and [Tailwind CSS](https://tailwindcss.com/).
+*Automatically synced with your [v0.dev](https://v0.dev) deployments*
 
-### Features
-- Modern, responsive design
-- Built with Next.js App Router
-- UI components powered by Tailwind CSS
-- Custom hooks and utilities
-- Theme support (light/dark)
+[![Deployed on Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-black?style=for-the-badge&logo=vercel)](https://vercel.com/arunpandian-cs-projects/v0-modern-portfolio-design)
+[![Built with v0](https://img.shields.io/badge/Built%20with-v0.dev-black?style=for-the-badge)](https://v0.dev/chat/projects/HUR1PCwdrDp)
 
-### Getting Started
+## Overview
 
-1. **Install dependencies:**
-   ```sh
-   pnpm install
-   ```
-2. **Run the development server:**
-   ```sh
-   pnpm dev
-   ```
-3. Open [http://localhost:3000](http://localhost:3000) in your browser.
+This repository will stay in sync with your deployed chats on [v0.dev](https://v0.dev).
+Any changes you make to your deployed app will be automatically pushed to this repository from [v0.dev](https://v0.dev).
 
-### Project Structure
+## Deployment
 
-- `app/` - Application pages and layout
-- `components/` - Reusable UI components
-- `hooks/` - Custom React hooks
-- `lib/` - Utility functions
-- `public/` - Static assets
-- `styles/` - Global styles
+Your project is live at:
 
-### Customization
+**[https://vercel.com/arunpandian-cs-projects/v0-modern-portfolio-design](https://vercel.com/arunpandian-cs-projects/v0-modern-portfolio-design)**
 
-Update content, images, and styles to personalize your portfolio. Components are modular and easy to extend.
+## Build your app
 
-### License
+Continue building your app on:
 
-This project is open source and available under the [MIT License](LICENSE).
+**[https://v0.dev/chat/projects/HUR1PCwdrDp](https://v0.dev/chat/projects/HUR1PCwdrDp)**
+
+## How It Works
+
+1. Create and modify your project using [v0.dev](https://v0.dev)
+2. Deploy your chats from the v0 interface
+3. Changes are automatically pushed to this repository
+4. Vercel deploys the latest version from this repository
