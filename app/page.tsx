@@ -92,6 +92,31 @@ export default function Portfolio() {
     { id: "contact", label: "Contact", icon: Mail },
   ]
 
+  // Update activeSection on scroll
+  useEffect(() => {
+    const sectionIds = navItems.map(item => item.id);
+    const handleScroll = () => {
+      let closestSection = sectionIds[0];
+      let minDistance = Infinity;
+      sectionIds.forEach(id => {
+        const el = document.getElementById(id);
+        if (el) {
+          const rect = el.getBoundingClientRect();
+          // Distance from top of viewport (positive = below top, negative = above top)
+          const distance = Math.abs(rect.top - 80); // 80px offset for nav
+          if (distance < minDistance && rect.bottom > 80) {
+            minDistance = distance;
+            closestSection = id;
+          }
+        }
+      });
+      setActiveSection(closestSection);
+    };
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    handleScroll(); // Initial check
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white overflow-x-hidden flex">
       {/* Animated Background */}
@@ -112,19 +137,18 @@ export default function Portfolio() {
             </div>
           ))}
         </div>
-
         {/* Mouse follower */}
         <div
-          className="absolute w-96 h-96 bg-purple-500/10 rounded-full blur-3xl transition-all duration-1000 ease-out pointer-events-none"
+          className="absolute w-60 h-60 sm:w-80 sm:h-80 md:w-96 md:h-96 bg-purple-500/10 rounded-full blur-3xl transition-all duration-1000 ease-out pointer-events-none"
           style={{
-            left: mousePosition.x - 192,
-            top: mousePosition.y - 192,
+            left: mousePosition.x - 120,
+            top: mousePosition.y - 120,
           }}
         />
       </div>
 
       {/* Vertical Navigation */}
-      <nav className="fixed left-0 top-0 h-full w-20 lg:w-64 bg-slate-900/95 backdrop-blur-md border-r border-white/10 z-50 flex flex-col">
+      <nav className="hidden sm:flex fixed left-0 top-0 h-full w-16 md:w-20 lg:w-64 bg-slate-900/95 backdrop-blur-md border-r border-white/10 z-50 flex-col">
         {/* Profile Section */}
         <div className="p-4 lg:p-6 text-center border-b border-white/10">
           <div className="w-16 h-16 lg:w-20 lg:h-20 mx-auto mb-4 relative">
@@ -219,25 +243,25 @@ export default function Portfolio() {
       </nav>
 
       {/* Main Content */}
-      <div className="flex-1 ml-20 lg:ml-64">
+      <div className="flex-1 ml-0 sm:ml-16 md:ml-20 lg:ml-64">
         {/* Hero Section */}
-        <section id="home" className="min-h-screen relative overflow-hidden">
+        <section id="home" className="min-h-[70vh] sm:min-h-screen relative overflow-hidden">
           {/* Content Overlay */}
           <div className="relative z-10 h-full flex px-4 lg:px-8 flex-row items-center ml-0 mr-0">
             <div className="max-w-6xl mx-auto w-full">
               <div className="flex h-screen justify-center items-center my-0">
                 {/* Text Content */}
                 <div className="text-center">
-                  <h1 className="text-6xl md:text-8xl font-extrabold mb-4 bg-gradient-to-r from-purple-400 via-pink-400 to-purple-400 bg-clip-text text-transparent animate-pulse">
+                  <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-8xl font-extrabold mb-4 bg-gradient-to-r from-purple-400 via-pink-400 to-purple-400 bg-clip-text text-transparent animate-pulse">
                     ARUNPANDIAN C
                   </h1>
                   <div className="relative inline-block">
-                    <p className="text-3xl md:text-4xl text-purple-300 mb-8 animate-slideInLeft font-semibold">
+                    <p className="text-lg sm:text-2xl md:text-4xl text-purple-300 mb-6 sm:mb-8 animate-slideInLeft font-semibold">
                       I'm Frontend Developer
                     </p>
                   </div>
 
-                  <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-bounceIn">
+                  <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center animate-bounceIn">
                     <Button
                       onClick={() => scrollToSection("contact")}
                       className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white px-10 py-4 rounded-full transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-purple-500/25 text-lg font-bold"
@@ -248,14 +272,43 @@ export default function Portfolio() {
                     <Button
                       variant="outline"
                       className="border-purple-400 text-purple-300 hover:bg-purple-500/20 px-10 py-4 rounded-full transition-all duration-300 hover:scale-105 bg-transparent text-lg font-bold"
-                      onClick={() => window.open("/Resume.pdf", "_blank")}
+                      onClick={() => window.open("/Resume.docx", "_blank")}
                     >
                       <Download className="w-6 h-6 mr-3" />
                       Download CV
                     </Button>
                   </div>
-
-                  <div className="mt-12 animate-bounce">
+                  <div className="mt-10 sm:mt-16 md:mt-20 max-w-6xl mx-auto px-2">
+                    <h2 className="text-4xl font-bold text-center mb-8 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+                      Skills
+                    </h2>
+                    <div className="flex flex-wrap justify-center items-center gap-4 sm:gap-6 md:gap-8 lg:gap-10">
+                      {/* HTML5 */}
+                      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5" className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12" title="HTML5" />
+                      {/* CSS3 */}
+                      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3" className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12" title="CSS3" />
+                      {/* JavaScript */}
+                      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12" title="JavaScript" />
+                      {/* React.js */}
+                      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React.js" className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12" title="React.js" />
+                      {/* Node.js */}
+                      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js" className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12" title="Node.js" />
+                      {/* Python */}
+                      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12" title="Python" />
+                      {/* Git */}
+                      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12" title="Git" />
+                      {/* Postman */}
+                      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postman/postman-original.svg" alt="Postman" className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12" title="Postman" />
+                      {/* Vercel */}
+                      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vercel/vercel-original.svg" alt="Vercel" className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12" title="Vercel" />
+                      {/* Cursor (using a generic cursor icon) */}
+                      <svg className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 text-purple-400" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                        <title>Cursor</title>
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M8 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                      </svg>
+                    </div>
+                  </div>
+                  <div className="mt-20 sm:mt-32 md:mt-40 animate-bounce">
                     <ChevronDown
                       className="w-8 h-8 mx-auto text-purple-400 cursor-pointer hover:text-purple-300 transition-colors"
                       onClick={() => scrollToSection("about")}
@@ -269,7 +322,7 @@ export default function Portfolio() {
         
 
         {/* About Section */}
-        <section id="about" className="py-20 px-4 lg:px-8 section-title aos-init aos-animate" data-aos="fade-up">
+        <section id="about" className="py-10 sm:py-16 md:py-20 px-2 sm:px-4 lg:px-8 section-title aos-init aos-animate" data-aos="fade-up">
           <div className="max-w-6xl mx-auto">
             <h2 className="text-4xl font-bold text-center mb-16 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
               About Me
@@ -285,26 +338,26 @@ export default function Portfolio() {
             </div>
 
             <Card className="bg-white/5 backdrop-blur-md border-white/10 hover:bg-white/10 transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-purple-500/20">
-              <CardContent className="p-8">
-                <div className="flex flex-col lg:flex-row gap-8 items-start">
+              <CardContent className="p-4 sm:p-6 md:p-8">
+                <div className="flex flex-col md:flex-row gap-6 md:gap-8 items-start">
                   {/* Profile Image */}
-                  <div className="flex-shrink-0">
+                  <div className="flex-shrink-0 mx-auto md:mx-0">
                     <img
                       src="/images/profile.jpg"
                       alt="Arunpandian C"
-                      className="w-64 h-80 object-cover rounded-lg border-2 border-white/20 shadow-lg"
+                      className="w-32 h-40 sm:w-48 sm:h-60 md:w-64 md:h-80 object-cover rounded-lg border-2 border-white/20 shadow-lg"
                     />
                   </div>
 
                   {/* Personal Information */}
-                  <div className="flex-1">
+                  <div className="flex-1 mt-6 md:mt-0">
                     <h3 className="text-2xl font-bold text-purple-300 mb-2">Frontend Developer</h3>
                     <p className="text-white/80 mb-8 italic">
                       Passionate about creating seamless digital experiences through thoughtful design and clean code.
                       Dedicated to continuous learning and staying updated with the latest industry trends.
                     </p>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6">
                       {/* Left Column */}
                       <div className="space-y-4">
                         <div className="flex items-center">
@@ -340,8 +393,8 @@ export default function Portfolio() {
                           <span className="text-white/90">arunpandiancse25@gmail.com</span>
                         </div>
                         <div className="flex items-center">
-                          <span className="text-purple-300 font-semibold w-20">Freelance:</span>
-                          <span className="text-green-400 font-semibold">Available</span>
+                          <span className="text-purple-300 font-semibold w-20">Job:</span>
+                          <span className="text-green-400 font-semibold">Open to Work</span>
                         </div>
                       </div>
                     </div>
@@ -363,14 +416,14 @@ export default function Portfolio() {
         {/* Education Section */}
         <section
           id="education"
-          className="py-20 px-4 lg:px-8 bg-black/20 section-title aos-init aos-animate"
+          className="py-10 sm:py-16 md:py-20 px-2 sm:px-4 lg:px-8 bg-black/20 section-title aos-init aos-animate"
           data-aos="fade-up"
         >
           <div className="max-w-6xl mx-auto">
             <h2 className="text-4xl font-bold text-center mb-16 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
               Education
             </h2>
-            <div className="space-y-8">
+            <div className="space-y-6 sm:space-y-8">
               {[
                 {
                   institution: "Manakula Vinayagar Institute of Technology",
@@ -413,7 +466,7 @@ export default function Portfolio() {
                     </div>
                   </CardHeader>
                   <CardContent>
-                    <div className="flex justify-between items-center">
+                    <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2 sm:gap-0">
                       <span className="text-white/70">{edu.duration}</span>
                       <span className="text-green-400 font-semibold">{edu.grade}</span>
                     </div>
@@ -425,12 +478,12 @@ export default function Portfolio() {
         </section>
 
         {/* Projects Section */}
-        <section id="projects" className="py-20 px-4 lg:px-8 section-title aos-init aos-animate" data-aos="fade-up">
+        <section id="projects" className="py-10 sm:py-16 md:py-20 px-2 sm:px-4 lg:px-8 section-title aos-init aos-animate" data-aos="fade-up">
           <div className="max-w-6xl mx-auto">
             <h2 className="text-4xl font-bold text-center mb-16 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
               Projects
             </h2>
-            <div className="grid md:grid-cols-2 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8">
               {[
                 {
                   title: "Vehicle Detection and Identification",
@@ -478,7 +531,7 @@ export default function Portfolio() {
         {/* Skills Section */}
         <section
           id="skills"
-          className="py-20 px-4 lg:px-8 bg-black/20 section-title aos-init aos-animate"
+          className="py-10 sm:py-16 md:py-20 px-2 sm:px-4 lg:px-8 bg-black/20 section-title aos-init aos-animate"
           data-aos="fade-up"
         >
           <div className="max-w-6xl mx-auto">
@@ -486,43 +539,32 @@ export default function Portfolio() {
               Skills & Achievements
             </h2>
 
-            <div className="grid md:grid-cols-2 gap-8 mb-12">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 mb-8 md:mb-12">
+              {/* Skills Card (replaces Technical Skills) */}
               <Card
                 className="bg-white/5 backdrop-blur-md border-white/10 hover:bg-white/10 transition-all duration-500 hover:-translate-y-2 aos-init aos-animate"
                 data-aos="fade-up"
               >
                 <CardHeader>
-                  <CardTitle className="text-purple-300">Technical Skills</CardTitle>
+                  <CardTitle className="text-purple-300">Skills</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <div className="space-y-4">
                     <div>
-                      <h4 className="text-white/90 font-semibold mb-2">Programming Languages</h4>
-                      <div className="flex flex-wrap gap-2">
-                        {["HTML", "CSS", "JavaScript", "React"].map((skill) => (
-                          <Badge
-                            key={skill}
-                            variant="secondary"
-                            className="bg-purple-500/20 text-purple-300 hover:bg-purple-500/30 transition-colors"
-                          >
-                            {skill}
-                          </Badge>
-                        ))}
-                      </div>
+                      <h4 className="text-white/90 font-semibold mb-1">Frontend</h4>
+                      <p className="text-white/80">HTML5, CSS3, JavaScript, React.js, Tailwind CSS</p>
                     </div>
                     <div>
-                      <h4 className="text-white/90 font-semibold mb-2">Software</h4>
-                      <div className="flex flex-wrap gap-2">
-                        {["Word", "Excel"].map((software) => (
-                          <Badge
-                            key={software}
-                            variant="secondary"
-                            className="bg-blue-500/20 text-blue-300 hover:bg-blue-500/30 transition-colors"
-                          >
-                            {software}
-                          </Badge>
-                        ))}
-                      </div>
+                      <h4 className="text-white/90 font-semibold mb-1">Backend</h4>
+                      <p className="text-white/80">Node.js, Express.js, Python</p>
+                    </div>
+                    <div>
+                      <h4 className="text-white/90 font-semibold mb-1">Soft Skills</h4>
+                      <p className="text-white/80">Problem Solving, Communication, Team Collaboration, Adaptability</p>
+                    </div>
+                    <div>
+                      <h4 className="text-white/90 font-semibold mb-1">Tools & Platforms</h4>
+                      <p className="text-white/80">Git, GitHub, VS Code, Postman, Vercel, cursor</p>
                     </div>
                   </div>
                 </CardContent>
@@ -561,13 +603,13 @@ export default function Portfolio() {
         </section>
 
         {/* Contact Section */}
-        <section id="contact" className="py-20 px-4 lg:px-8 section-title aos-init aos-animate" data-aos="fade-up">
+        <section id="contact" className="py-10 sm:py-16 md:py-20 px-2 sm:px-4 lg:px-8 section-title aos-init aos-animate" data-aos="fade-up">
           <div className="max-w-6xl mx-auto text-center">
             <h2 className="text-4xl font-bold mb-16 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
               Get In Touch
             </h2>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 mb-8 md:mb-16">
               {[
                 {
                   icon: Phone,
@@ -619,12 +661,12 @@ export default function Portfolio() {
             </div>
 
             <div className="text-center">
-              <p className="text-white/80 text-lg mb-8">
+              <p className="text-white/80 text-base sm:text-lg mb-6 sm:mb-8">
                 Ready to collaborate on your next project? Let's create something amazing together!
               </p>
               <Button
                 onClick={() => window.open("mailto:arunpandiancse25@gmail.com", "_blank")}
-                className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white px-8 py-3 rounded-full transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-purple-500/25"
+                className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white px-6 sm:px-8 py-2 sm:py-3 rounded-full transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-purple-500/25 text-base sm:text-lg"
               >
                 <Mail className="w-5 h-5 mr-2" />
                 Send Message
@@ -634,7 +676,7 @@ export default function Portfolio() {
         </section>
 
         {/* Footer */}
-        <footer className="py-8 px-4 lg:px-8 border-t border-white/10 bg-black/20">
+        <footer className="py-4 sm:py-6 md:py-8 px-2 sm:px-4 lg:px-8 border-t border-white/10 bg-black/20">
           <div className="max-w-6xl mx-auto text-center">
             <p className="text-white/60">
               © 2024 Arunpandian C. All rights reserved. Built with passion and creativity.
