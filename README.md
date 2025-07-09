@@ -1,30 +1,75 @@
-# Modern portfolio design
+# Arunpandian C Portfolio
 
-*Automatically synced with your [v0.dev](https://v0.dev) deployments*
+A modern, fully responsive portfolio website built with Next.js, React, and Tailwind CSS to showcase the skills, projects, and achievements of Arunpandian C.
 
-[![Deployed on Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-black?style=for-the-badge&logo=vercel)](https://vercel.com/arunpandian-cs-projects/v0-modern-portfolio-design)
-[![Built with v0](https://img.shields.io/badge/Built%20with-v0.dev-black?style=for-the-badge)](https://v0.dev/chat/projects/HUR1PCwdrDp)
+## 🚀 Features
 
-## Overview
+- **Responsive Design:** Looks great on all devices (desktop, tablet, mobile)
+- **Animated UI:** Smooth transitions and interactive elements
+- **Skills Showcase:** Visual display of tech stack and soft skills
+- **Project Highlights:** Brief descriptions of key projects
+- **Education & Experience:** Academic background and achievements
+- **Contact Section:** Easy ways to get in touch
+- **Downloadable Resume:** Quick access to CV
 
-This repository will stay in sync with your deployed chats on [v0.dev](https://v0.dev).
-Any changes you make to your deployed app will be automatically pushed to this repository from [v0.dev](https://v0.dev).
+## 🛠️ Tech Stack
 
-## Deployment
+- [Next.js](https://nextjs.org/)
+- [React](https://react.dev/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Lucide Icons](https://lucide.dev/)
 
-Your project is live at:
+## 📁 Folder Structure
 
-**[https://vercel.com/arunpandian-cs-projects/v0-modern-portfolio-design](https://vercel.com/arunpandian-cs-projects/v0-modern-portfolio-design)**
+```
+arun-portfolio/
+├── app/                # Main app pages and layout
+├── components/         # Reusable UI components
+├── hooks/              # Custom React hooks
+├── lib/                # Utility functions
+├── public/             # Static assets (images, resume, etc.)
+├── styles/             # Global styles
+├── README.md           # Project documentation
+├── package.json        # Project dependencies
+└── ...
+```
 
-## Build your app
+## 🖥️ Getting Started
 
-Continue building your app on:
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/arunpandian9159/arun-portfolio.git
+   cd arun-portfolio
+   ```
+2. **Install dependencies:**
+   ```bash
+   npm install
+   # or
+   pnpm install
+   ```
+3. **Run the development server:**
+   ```bash
+   npm run dev
+   # or
+   pnpm dev
+   ```
+4. **Open in your browser:**
+   Visit [http://localhost:3000](http://localhost:3000)
 
-**[https://v0.dev/chat/projects/HUR1PCwdrDp](https://v0.dev/chat/projects/HUR1PCwdrDp)**
+## 📸 Screenshots
 
-## How It Works
+> ![Portfolio Screenshot](public/images/profile.jpg)
 
-1. Create and modify your project using [v0.dev](https://v0.dev)
-2. Deploy your chats from the v0 interface
-3. Changes are automatically pushed to this repository
-4. Vercel deploys the latest version from this repository
+## 📄 Resume
+
+- [Download Resume](public/Resume.docx)
+
+## 🙋‍♂️ Contact
+
+- **Email:** arunpandiancse25@gmail.com
+- **LinkedIn:** [Arunpandian C](https://www.linkedin.com/in/Arunpandian-C)
+- **GitHub:** [arunpandian9159](https://github.com/arunpandian9159)
+
+---
+
+> © 2024 Arunpandian C. All rights reserved. Built with passion and creativity.
