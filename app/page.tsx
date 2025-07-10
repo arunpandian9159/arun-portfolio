@@ -282,30 +282,35 @@ export default function Portfolio() {
                     <h2 className="text-4xl font-bold text-center mb-8 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
                       Skills
                     </h2>
-                    <div className="flex flex-wrap justify-center items-center gap-4 sm:gap-6 md:gap-8 lg:gap-10">
-                      {/* HTML5 */}
-                      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5" className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12" title="HTML5" />
-                      {/* CSS3 */}
-                      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3" className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12" title="CSS3" />
-                      {/* JavaScript */}
-                      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12" title="JavaScript" />
-                      {/* React.js */}
-                      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React.js" className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12" title="React.js" />
-                      {/* Node.js */}
-                      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js" className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12" title="Node.js" />
-                      {/* Python */}
-                      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12" title="Python" />
-                      {/* Git */}
-                      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12" title="Git" />
-                      {/* Postman */}
-                      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postman/postman-original.svg" alt="Postman" className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12" title="Postman" />
-                      {/* Vercel */}
-                      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vercel/vercel-original.svg" alt="Vercel" className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12" title="Vercel" />
-                      {/* Cursor (using a generic cursor icon) */}
-                      <svg className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 text-purple-400" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-                        <title>Cursor</title>
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M8 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                      </svg>
+                    <div className="flex flex-wrap justify-center items-center gap-6 sm:gap-8 md:gap-10 lg:gap-12">
+                      {[
+                        { name: "HTML5", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" },
+                        { name: "CSS3", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" },
+                        { name: "JavaScript", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" },
+                        { name: "React.js", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
+                        { name: "Node.js", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" },
+                        { name: "Python", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" },
+                        { name: "Git", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" },
+                        { name: "Postman", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postman/postman-original.svg" },
+                      ].map((skill, index) => (
+                        <div
+                          key={skill.name}
+                          className="flex flex-col items-center group cursor-pointer transform hover:scale-110 transition-all duration-300 animate-moveLeftToRight"
+                          style={{
+                            animationDelay: `${index * 0.2}s`
+                          }}
+                        >
+                          <img 
+                            src={skill.icon} 
+                            alt={skill.name} 
+                            className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 mb-2 group-hover:drop-shadow-lg group-hover:drop-shadow-purple-400/50 transition-all duration-300" 
+                            title={skill.name}
+                          />
+                          <span className="text-xs sm:text-sm md:text-base text-white/80 group-hover:text-purple-300 transition-colors duration-300 font-medium text-center">
+                            {skill.name}
+                          </span>
+                        </div>
+                      ))}
                     </div>
                   </div>
                   <div className="mt-20 sm:mt-32 md:mt-40 animate-bounce">
@@ -365,16 +370,16 @@ export default function Portfolio() {
                           <span className="text-white/90">25 September 2003</span>
                         </div>
                         <div className="flex items-center">
-                          <span className="text-purple-300 font-semibold w-20">Website:</span>
-                          <span className="text-white/90">www.arunpandian.dev</span>
-                        </div>
-                        <div className="flex items-center">
                           <span className="text-purple-300 font-semibold w-20">Phone:</span>
                           <span className="text-white/90">+91 8072396488</span>
                         </div>
                         <div className="flex items-center">
                           <span className="text-purple-300 font-semibold w-20">City:</span>
                           <span className="text-white/90">Puducherry, India</span>
+                        </div>
+                        <div className="flex items-center">
+                          <span className="text-purple-300 font-semibold w-20">College:</span>
+                          <span className="text-white/90">Manakula vinayagar Institute of technology</span>
                         </div>
                       </div>
 
@@ -386,7 +391,7 @@ export default function Portfolio() {
                         </div>
                         <div className="flex items-center">
                           <span className="text-purple-300 font-semibold w-20">Degree:</span>
-                          <span className="text-white/90">Bachelor's in CSE</span>
+                          <span className="text-white/90">B.Tech in CSE</span>
                         </div>
                         <div className="flex items-center">
                           <span className="text-purple-300 font-semibold w-20">Email:</span>
