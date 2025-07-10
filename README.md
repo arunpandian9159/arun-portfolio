@@ -2,6 +2,9 @@
 
 A modern, fully responsive portfolio website built with Next.js, React, and Tailwind CSS to showcase the skills, projects, and achievements of Arunpandian C.
 
+# Deployed website:
+https://arun-portfolio-plum.vercel.app/
+
 ## 🚀 Features
 
 - **Responsive Design:** Looks great on all devices (desktop, tablet, mobile)
