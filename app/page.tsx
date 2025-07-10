@@ -556,7 +556,7 @@ export default function Portfolio() {
                     </div>
                     <div>
                       <h4 className="text-white/90 font-semibold mb-1">Backend</h4>
-                      <p className="text-white/80">Node.js, Express.js, Python</p>
+                      <p className="text-white/80">Node.js, Express.js, Supabase, Python</p>
                     </div>
                     <div>
                       <h4 className="text-white/90 font-semibold mb-1">Soft Skills</h4>
@@ -679,7 +679,7 @@ export default function Portfolio() {
         <footer className="py-4 sm:py-6 md:py-8 px-2 sm:px-4 lg:px-8 border-t border-white/10 bg-black/20">
           <div className="max-w-6xl mx-auto text-center">
             <p className="text-white/60">
-              © 2024 Arunpandian C. All rights reserved. Built with passion and creativity.
+              © 2025 Arunpandian C. All rights reserved. Built with passion and creativity.
             </p>
           </div>
         </footer>
