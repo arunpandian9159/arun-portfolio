@@ -59,10 +59,6 @@ arun-portfolio/
 4. **Open in your browser:**
    Visit [http://localhost:3000](http://localhost:3000)
 
-## 📸 Screenshots
-
-> ![Portfolio Screenshot](public/images/profile.jpg)
-
 ## 📄 Resume
 
 - [Download Resume](public/Resume.docx)
