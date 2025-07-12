@@ -14,6 +14,7 @@ import { ScrollProgress } from "@/components/ui/scroll-progress"
 import { BackToTop } from "@/components/ui/back-to-top"
 import { Analytics } from "@/components/ui/analytics"
 import { PerformanceMonitor } from "@/components/ui/performance-monitor"
+import { PWAInstall } from "@/components/ui/pwa-install"
 import { usePortfolioState } from "@/hooks/use-portfolio-state"
 import { useAOSAnimation } from "@/hooks/use-aos-animation"
 export default function Portfolio() {
@@ -28,32 +29,35 @@ export default function Portfolio() {
   useAOSAnimation()
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white overflow-x-hidden flex">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white overflow-x-hidden">
       <ScrollProgress />
       <AnimatedBackground mousePosition={mousePosition} />
       <Analytics />
       <PerformanceMonitor />
       
-      <Navigation
-        activeSection={activeSection}
-        isMenuOpen={isMenuOpen}
-        setIsMenuOpen={setIsMenuOpen}
-        scrollToSection={scrollToSection}
-      />
+      <div className="flex min-h-screen">
+        <Navigation
+          activeSection={activeSection}
+          isMenuOpen={isMenuOpen}
+          setIsMenuOpen={setIsMenuOpen}
+          scrollToSection={scrollToSection}
+        />
 
-      {/* Main Content */}
-      <div className="flex-1 ml-0 sm:ml-16 md:ml-20 lg:ml-64">
-        <HeroSection scrollToSection={scrollToSection} />
-        <AboutSection />
-        <EducationSection />
-        <ProjectsSection />
-        <SkillsSection />
-        <CertificatesSection />
-        <ContactSection />
-        <Footer />
+        {/* Main Content */}
+        <main className="flex-1 w-full sm:ml-16 md:ml-20 lg:ml-64">
+          <HeroSection scrollToSection={scrollToSection} />
+          <AboutSection />
+          <EducationSection />
+          <ProjectsSection />
+          <SkillsSection />
+          <CertificatesSection />
+          <ContactSection />
+          <Footer />
+        </main>
       </div>
       
       <BackToTop />
+      <PWAInstall />
     </div>
   )
 }

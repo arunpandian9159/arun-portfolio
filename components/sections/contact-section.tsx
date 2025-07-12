@@ -44,22 +44,22 @@ export function ContactSection() {
   return (
     <section id="contact" className="py-10 sm:py-16 md:py-20 px-2 sm:px-4 lg:px-8 section-title aos-init aos-animate" data-aos="fade-up">
       <div className="max-w-6xl mx-auto text-center">
-        <h2 className="text-4xl font-bold mb-16 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-8 sm:mb-12 md:mb-16 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
           Get In Touch
         </h2>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 mb-8 md:mb-16">
+        <div className="grid grid-cols-1 xs:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 md:gap-6 mb-8 md:mb-16">
           {contactData.map((contact, index) => (
             <a key={index} href={contact.href} target="_blank" rel="noopener noreferrer" className="group">
               <Card
-                className={`bg-white/5 backdrop-blur-md border-white/10 hover:bg-white/10 transition-all duration-500 hover:scale-110 hover:shadow-2xl ${contact.bgColor} cursor-pointer h-full`}
+                className={`bg-white/5 backdrop-blur-md border-white/10 hover:bg-white/10 transition-all duration-500 hover:scale-105 sm:hover:scale-110 hover:shadow-2xl ${contact.bgColor} cursor-pointer h-full`}
               >
-                <CardContent className="p-6 text-center flex flex-col items-center justify-center h-48">
+                <CardContent className="p-4 sm:p-6 text-center flex flex-col items-center justify-center h-36 sm:h-48">
                   <contact.icon
-                    className={`w-10 h-10 mx-auto mb-4 ${contact.color} group-hover:scale-125 transition-transform duration-300`}
+                    className={`w-8 h-8 sm:w-10 sm:h-10 mx-auto mb-3 sm:mb-4 ${contact.color} group-hover:scale-125 transition-transform duration-300`}
                   />
-                  <h3 className="text-white/90 font-semibold mb-3 text-base">{contact.label}</h3>
-                  <p className="text-white/70 text-xs break-all leading-relaxed">{contact.value}</p>
+                  <h3 className="text-white/90 font-semibold mb-2 sm:mb-3 text-sm sm:text-base">{contact.label}</h3>
+                  <p className="text-white/70 text-xs sm:text-sm break-all leading-relaxed">{contact.value}</p>
                 </CardContent>
               </Card>
             </a>

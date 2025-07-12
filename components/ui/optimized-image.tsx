@@ -67,7 +67,9 @@ export function OptimizedImage({
         onLoad={handleLoad}
         onError={handleError}
         quality={85}
-        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+        sizes="(max-width: 475px) 100vw, (max-width: 768px) 50vw, (max-width: 1200px) 33vw, 25vw"
+        loading={priority ? "eager" : "lazy"}
+        decoding="async"
       />
     </div>
   )

@@ -35,7 +35,7 @@ export function EducationSection() {
       data-aos="fade-up"
     >
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-4xl font-bold text-center mb-16 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-8 sm:mb-12 md:mb-16 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
           Education
         </h2>
         <div className="space-y-6 sm:space-y-8">
@@ -46,14 +46,14 @@ export function EducationSection() {
               data-aos="fade-up"
             >
               <CardHeader>
-                <div className="flex justify-between items-start">
-                  <div>
-                    <CardTitle className="text-xl text-purple-300 group-hover:text-purple-200 transition-colors">
+                <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-3">
+                  <div className="flex-1">
+                    <CardTitle className="text-lg sm:text-xl text-purple-300 group-hover:text-purple-200 transition-colors">
                       {edu.institution}
                     </CardTitle>
-                    <CardDescription className="text-white/80 text-lg mt-2">{edu.degree}</CardDescription>
+                    <CardDescription className="text-white/80 text-base sm:text-lg mt-2">{edu.degree}</CardDescription>
                   </div>
-                  <Badge variant="secondary" className="bg-purple-500/20 text-purple-300">
+                  <Badge variant="secondary" className="bg-purple-500/20 text-purple-300 self-start">
                     {edu.location}
                   </Badge>
                 </div>

@@ -21,54 +21,54 @@ const skills = [
 
 export function HeroSection({ scrollToSection }: HeroSectionProps) {
   return (
-    <section id="home" className="min-h-[70vh] sm:min-h-screen relative overflow-hidden">
+    <section id="home" className="min-h-screen relative overflow-hidden">
       {/* Content Overlay */}
-      <div className="relative z-10 h-full flex px-4 lg:px-8 flex-row items-center ml-0 mr-0">
+      <div className="relative z-10 h-full flex px-4 sm:px-6 lg:px-8 flex-row items-center">
         <div className="max-w-6xl mx-auto w-full">
-          <div className="flex h-screen justify-center items-center my-0">
+          <div className="flex min-h-screen justify-center items-center py-8 sm:py-0">
             {/* Text Content */}
-            <div className="text-center">
-              <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-8xl font-extrabold mb-4 bg-gradient-to-r from-purple-400 via-pink-400 to-purple-400 bg-clip-text text-transparent animate-pulse">
+            <div className="text-center w-full">
+              <h1 className="text-2xl xs:text-3xl sm:text-5xl md:text-6xl lg:text-8xl font-extrabold mb-4 sm:mb-6 bg-gradient-to-r from-purple-400 via-pink-400 to-purple-400 bg-clip-text text-transparent animate-pulse leading-tight">
                 ARUNPANDIAN C
               </h1>
               <div className="relative inline-block">
-                <p className="text-lg sm:text-2xl md:text-4xl text-purple-300 mb-6 sm:mb-8 animate-slideInLeft font-semibold">
+                <p className="text-base xs:text-lg sm:text-2xl md:text-4xl text-purple-300 mb-6 sm:mb-8 animate-slideInLeft font-semibold">
                   I'm Frontend Developer
                 </p>
               </div>
 
-              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center animate-bounceIn">
+              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center animate-bounceIn px-4">
                 <Button
                   onClick={() => scrollToSection("contact")}
-                  className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white px-10 py-4 rounded-full transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-purple-500/25 text-lg font-bold"
+                  className="w-full sm:w-auto bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white px-8 sm:px-10 py-3 sm:py-4 rounded-full transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-purple-500/25 text-base sm:text-lg font-bold"
                 >
-                  <Mail className="w-6 h-6 mr-3" />
+                  <Mail className="w-5 h-5 sm:w-6 sm:h-6 mr-2 sm:mr-3" />
                   Get In Touch
                 </Button>
                 <Button
                   variant="outline"
-                  className="border-purple-400 text-purple-300 hover:bg-purple-500/20 px-10 py-4 rounded-full transition-all duration-300 hover:scale-105 bg-transparent text-lg font-bold"
+                  className="w-full sm:w-auto border-purple-400 text-purple-300 hover:bg-purple-500/20 px-8 sm:px-10 py-3 sm:py-4 rounded-full transition-all duration-300 hover:scale-105 bg-transparent text-base sm:text-lg font-bold"
                   onClick={() => window.open("/Resume.docx", "_blank")}
                 >
-                  <Download className="w-6 h-6 mr-3" />
+                  <Download className="w-5 h-5 sm:w-6 sm:h-6 mr-2 sm:mr-3" />
                   Download CV
                 </Button>
               </div>
               
-              <div className="mt-10 sm:mt-16 md:mt-20 max-w-6xl mx-auto px-2">
-                <h2 className="text-4xl font-bold text-center mb-8 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+              <div className="mt-8 sm:mt-16 md:mt-20 max-w-6xl mx-auto px-2">
+                <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-6 sm:mb-8 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
                   Skills
                 </h2>
-                <div className="flex flex-wrap justify-center items-center gap-6 sm:gap-8 md:gap-10 lg:gap-12">
+                <div className="flex flex-wrap justify-center items-center gap-4 sm:gap-6 md:gap-8 lg:gap-10">
                   {skills.map((skill, index) => (
                     <SkillIcon key={skill.name} skill={skill} index={index} />
                   ))}
                 </div>
               </div>
               
-              <div className="mt-20 sm:mt-32 md:mt-40 animate-bounce">
+              <div className="mt-12 sm:mt-20 md:mt-32 lg:mt-40 animate-bounce">
                 <ChevronDown
-                  className="w-8 h-8 mx-auto text-purple-400 cursor-pointer hover:text-purple-300 transition-colors"
+                  className="w-6 h-6 sm:w-8 sm:h-8 mx-auto text-purple-400 cursor-pointer hover:text-purple-300 transition-colors"
                   onClick={() => scrollToSection("about")}
                 />
               </div>

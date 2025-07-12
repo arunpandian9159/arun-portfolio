@@ -38,12 +38,12 @@ export function CertificatesSection() {
       data-aos="fade-up"
     >
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-4xl font-bold text-center mb-16 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-8 sm:mb-12 md:mb-16 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
           Certificate Gallery
         </h2>
-        <div className="flex justify-center gap-4 md:gap-6">
+        <div className="flex justify-center gap-2 sm:gap-4 md:gap-6 overflow-x-auto pb-4">
           {certificates.map((certificate, index) => (
-            <div key={index} className="certificate-card w-32 h-80 md:w-40 md:h-96 lg:w-48 lg:h-[28rem]">
+            <div key={index} className="certificate-card w-24 h-64 xs:w-28 xs:h-72 sm:w-32 sm:h-80 md:w-40 md:h-96 lg:w-48 lg:h-[28rem] flex-shrink-0">
               <div className="certificate-card-inner">
                 <Image
                   src={certificate.src}

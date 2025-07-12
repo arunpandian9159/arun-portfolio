@@ -1,0 +1,53 @@
+{
+  "timestamp": "2025-07-12T11:34:01.376Z",
+  "optimizations": {
+    "pwa": {
+      "serviceWorker": true,
+      "manifest": true,
+      "icons": [
+        {
+          "size": 72,
+          "exists": false
+        },
+        {
+          "size": 96,
+          "exists": false
+        },
+        {
+          "size": 128,
+          "exists": false
+        },
+        {
+          "size": 144,
+          "exists": false
+        },
+        {
+          "size": 152,
+          "exists": false
+        },
+        {
+          "size": 192,
+          "exists": false
+        },
+        {
+          "size": 384,
+          "exists": false
+        },
+        {
+          "size": 512,
+          "exists": false
+        }
+      ]
+    },
+    "responsive": {
+      "tailwindConfig": true,
+      "mobileHooks": true,
+      "touchGestures": true
+    },
+    "performance": {
+      "imageOptimization": true,
+      "performanceHooks": true,
+      "loadingComponents": true
+    }
+  }
+}
