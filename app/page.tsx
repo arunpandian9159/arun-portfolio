@@ -168,29 +168,33 @@ export default function Portfolio() {
                 href="https://github.com/arunpandian9159"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-8 h-8 bg-white/10 rounded-full flex items-center justify-center hover:bg-purple-500/20 transition-colors"
+                className="w-10 h-10 bg-gradient-to-br from-white/20 to-white/5 rounded-full flex items-center justify-center hover:bg-purple-500/30 transition-all duration-300 hover:scale-110 shadow-lg backdrop-blur-sm border border-white/20 hover:shadow-purple-500/25"
+                style={{ transformStyle: 'preserve-3d' }}
               >
-                <Github className="w-4 h-4" />
+                <Github className="w-5 h-5 animate-spin3d" />
               </a>
               <a
                 href="https://www.linkedin.com/in/Arunpandian-C"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-8 h-8 bg-white/10 rounded-full flex items-center justify-center hover:bg-purple-500/20 transition-colors"
+                className="w-10 h-10 bg-gradient-to-br from-white/20 to-white/5 rounded-full flex items-center justify-center hover:bg-purple-500/30 transition-all duration-300 hover:scale-110 shadow-lg backdrop-blur-sm border border-white/20 hover:shadow-purple-500/25"
+                style={{ transformStyle: 'preserve-3d' }}
               >
-                <Linkedin className="w-4 h-4" />
+                <Linkedin className="w-5 h-5 animate-spin3d" />
               </a>
               <a
                 href="mailto:arunpandiancse25@gmail.com"
-                className="w-8 h-8 bg-white/10 rounded-full flex items-center justify-center hover:bg-purple-500/20 transition-colors"
+                className="w-10 h-10 bg-gradient-to-br from-white/20 to-white/5 rounded-full flex items-center justify-center hover:bg-purple-500/30 transition-all duration-300 hover:scale-110 shadow-lg backdrop-blur-sm border border-white/20 hover:shadow-purple-500/25"
+                style={{ transformStyle: 'preserve-3d' }}
               >
-                <Mail className="w-4 h-4" />
+                <Mail className="w-5 h-5 animate-spin3d" />
               </a>
               <a
                 href="tel:+918072396488"
-                className="w-8 h-8 bg-white/10 rounded-full flex items-center justify-center hover:bg-purple-500/20 transition-colors"
+                className="w-10 h-10 bg-gradient-to-br from-white/20 to-white/5 rounded-full flex items-center justify-center hover:bg-purple-500/30 transition-all duration-300 hover:scale-110 shadow-lg backdrop-blur-sm border border-white/20 hover:shadow-purple-500/25"
+                style={{ transformStyle: 'preserve-3d' }}
               >
-                <Phone className="w-4 h-4" />
+                <Phone className="w-5 h-5 animate-spin3d" />
               </a>
             </div>
           </div>
@@ -842,7 +846,7 @@ export default function Portfolio() {
               Certificate Gallery
             </h2>
             <div className="flex justify-center gap-4 md:gap-6">
-              <div className="certificate-card w-32 h-48 md:w-40 md:h-56 lg:w-48 lg:h-64">
+              <div className="certificate-card w-32 h-80 md:w-40 md:h-96 lg:w-48 lg:h-[28rem]">
                 <div className="certificate-card-inner">
                   <img
                     src="/Capgemini.png"
@@ -854,7 +858,7 @@ export default function Portfolio() {
                   </div>
                 </div>
               </div>
-              <div className="certificate-card w-32 h-48 md:w-40 md:h-56 lg:w-48 lg:h-64">
+              <div className="certificate-card w-32 h-80 md:w-40 md:h-96 lg:w-48 lg:h-[28rem]">
                 <div className="certificate-card-inner">
                   <img
                     src="/Learnathon.png"
@@ -866,7 +870,7 @@ export default function Portfolio() {
                   </div>
                 </div>
               </div>
-              <div className="certificate-card w-32 h-48 md:w-40 md:h-56 lg:w-48 lg:h-64">
+              <div className="certificate-card w-32 h-80 md:w-40 md:h-96 lg:w-48 lg:h-[28rem]">
                 <div className="certificate-card-inner">
                   <img
                     src="/Skill la thon.png"
@@ -878,7 +882,7 @@ export default function Portfolio() {
                   </div>
                 </div>
               </div>
-              <div className="certificate-card w-32 h-48 md:w-40 md:h-56 lg:w-48 lg:h-64">
+              <div className="certificate-card w-32 h-80 md:w-40 md:h-96 lg:w-48 lg:h-[28rem]">
                 <div className="certificate-card-inner">
                   <img
                     src="/python-certiport.png"
@@ -890,7 +894,7 @@ export default function Portfolio() {
                   </div>
                 </div>
               </div>
-              <div className="certificate-card w-32 h-48 md:w-40 md:h-56 lg:w-48 lg:h-64">
+              <div className="certificate-card w-32 h-80 md:w-40 md:h-96 lg:w-48 lg:h-[28rem]">
                 <div className="certificate-card-inner">
                   <img
                     src="/tripxplo intern certificate.png"

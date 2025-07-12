@@ -172,6 +172,24 @@ body {
   }
 }
 
+@keyframes spin3d {
+  0% {
+    transform: perspective(1000px) rotateY(0deg) rotateX(0deg);
+  }
+  25% {
+    transform: perspective(1000px) rotateY(90deg) rotateX(15deg);
+  }
+  50% {
+    transform: perspective(1000px) rotateY(180deg) rotateX(0deg);
+  }
+  75% {
+    transform: perspective(1000px) rotateY(270deg) rotateX(-15deg);
+  }
+  100% {
+    transform: perspective(1000px) rotateY(360deg) rotateX(0deg);
+  }
+}
+
 .animate-fadeInUp {
   animation: fadeInUp 1s ease-out;
 }
@@ -206,6 +224,11 @@ body {
 
 .animate-spin-slow {
   animation: spin-slow 20s linear infinite;
+}
+
+.animate-spin3d {
+  animation: spin3d 4s ease-in-out infinite;
+  transform-style: preserve-3d;
 }
 
 /* Custom AOS-like animations */
@@ -301,7 +324,7 @@ html {
 
 /* Certificate Card Styles */
 .certificate-card {
-    flex: 0.4;
+    flex: 1;
     min-width: 90px;
     height: 100%;
     border-radius: 20px;
