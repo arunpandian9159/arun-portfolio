@@ -1,7 +1,7 @@
 "use client"
 
-import { Button } from "@/components/ui/button"
 import { Mail, Download, ChevronDown } from "lucide-react"
+import { Button } from "@/components/ui/button"
 import { SkillIcon } from "@/components/ui/skill-icon"
 
 interface HeroSectionProps {

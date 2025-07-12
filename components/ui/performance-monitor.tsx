@@ -2,6 +2,15 @@
 
 import { useEffect, useState } from "react"
 
+interface LayoutShift extends PerformanceEntry {
+  value: number
+  hadRecentInput: boolean
+}
+
+interface PerformanceEventTiming extends PerformanceEntry {
+  processingStart: number
+}
+
 interface PerformanceMetrics {
   fcp?: number // First Contentful Paint
   lcp?: number // Largest Contentful Paint
@@ -29,13 +38,13 @@ export function PerformanceMonitor() {
             setMetrics(prev => ({ ...prev, lcp: entry.startTime }))
             break
           case 'first-input':
-            setMetrics(prev => ({ ...prev, fid: (entry as any).processingStart - entry.startTime }))
+            setMetrics(prev => ({ ...prev, fid: (entry as PerformanceEventTiming).processingStart - entry.startTime }))
             break
           case 'layout-shift':
-            if (!(entry as any).hadRecentInput) {
+            if (!(entry as LayoutShift).hadRecentInput) {
               setMetrics(prev => ({ 
                 ...prev, 
-                cls: (prev.cls || 0) + (entry as any).value 
+                cls: (prev.cls || 0) + (entry as LayoutShift).value 
               }))
             }
             break

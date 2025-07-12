@@ -87,8 +87,8 @@ export function DevTools() {
               variant="ghost"
               size="sm"
               onClick={() => {
-                console.log('Performance:', performance.getEntriesByType('navigation'))
-                console.log('Memory:', (performance as any).memory)
+                console.warn('Performance:', performance.getEntriesByType('navigation'))
+                console.warn('Memory:', (performance as unknown as Record<string, unknown>).memory)
               }}
               className="w-full justify-start"
             >

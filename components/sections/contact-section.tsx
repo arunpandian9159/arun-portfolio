@@ -1,9 +1,9 @@
 "use client"
 
+import { Mail, Phone, Linkedin, Github } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { ContactForm } from "@/components/ui/contact-form"
-import { Mail, Phone, Linkedin, Github } from "lucide-react"
 
 const contactData = [
   {

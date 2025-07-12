@@ -8,7 +8,7 @@ export function Analytics() {
     // Track page view
     const trackPageView = () => {
       if (typeof window !== "undefined") {
-        console.log("Page viewed:", window.location.pathname)
+        console.warn("Page viewed:", window.location.pathname)
         // Here you would integrate with your analytics service
         // Example: gtag('config', 'GA_MEASUREMENT_ID', { page_path: window.location.pathname })
       }
@@ -16,7 +16,7 @@ export function Analytics() {
 
     // Track section views
     const trackSectionView = (sectionId: string) => {
-      console.log("Section viewed:", sectionId)
+      console.warn("Section viewed:", sectionId)
       // Here you would track section engagement
     }
 
@@ -32,13 +32,13 @@ export function Analytics() {
         
         // Track milestone scroll depths
         if (scrollDepth >= 25 && maxScrollDepth < 25) {
-          console.log("Scroll depth: 25%")
+          console.warn("Scroll depth: 25%")
         } else if (scrollDepth >= 50 && maxScrollDepth < 50) {
-          console.log("Scroll depth: 50%")
+          console.warn("Scroll depth: 50%")
         } else if (scrollDepth >= 75 && maxScrollDepth < 75) {
-          console.log("Scroll depth: 75%")
+          console.warn("Scroll depth: 75%")
         } else if (scrollDepth >= 90 && maxScrollDepth < 90) {
-          console.log("Scroll depth: 90%")
+          console.warn("Scroll depth: 90%")
         }
       }
     }
@@ -47,7 +47,7 @@ export function Analytics() {
     const startTime = Date.now()
     const trackTimeOnPage = () => {
       const timeSpent = Math.round((Date.now() - startTime) / 1000)
-      console.log("Time on page:", timeSpent, "seconds")
+      console.warn("Time on page:", timeSpent, "seconds")
     }
 
     // Set up event listeners
@@ -83,8 +83,8 @@ export function Analytics() {
 
 // Hook for tracking custom events
 export const useAnalytics = () => {
-  const trackEvent = (eventName: string, properties?: Record<string, any>) => {
-    console.log("Event tracked:", eventName, properties)
+  const trackEvent = (eventName: string, properties?: Record<string, unknown>) => {
+    console.warn("Event tracked:", eventName, properties)
     // Here you would send the event to your analytics service
   }
 

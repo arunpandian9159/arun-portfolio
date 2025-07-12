@@ -2,9 +2,9 @@
 
 import { useState, useEffect, useRef } from "react"
 import { Search, X } from "lucide-react"
-import { Button } from "./button"
 import { NAV_ITEMS } from "@/lib/constants"
 import type { NavItem } from "@/lib/types"
+import { Button } from "./button"
 
 interface SearchModalProps {
   isOpen: boolean

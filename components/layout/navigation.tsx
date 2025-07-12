@@ -1,7 +1,6 @@
 "use client"
 
 import React from "react"
-import { OptimizedImage } from "@/components/ui/optimized-image"
 import {
   Mail,
   Phone,
@@ -14,6 +13,7 @@ import {
   Menu,
   X,
 } from "lucide-react"
+import { OptimizedImage } from "@/components/ui/optimized-image"
 
 interface NavigationProps {
   activeSection: string

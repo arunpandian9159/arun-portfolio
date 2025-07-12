@@ -27,7 +27,7 @@ export class ErrorBoundary extends Component<Props, State> {
     
     // Check if it's a ChunkLoadError and try to reload
     if (error.name === 'ChunkLoadError' || error.message.includes('Loading chunk')) {
-      console.log('ChunkLoadError detected, attempting to reload...')
+      console.warn('ChunkLoadError detected, attempting to reload...')
       // Reload the page after a short delay
       setTimeout(() => {
         window.location.reload()

@@ -1,9 +1,9 @@
 "use client"
 
 import { useState } from "react"
+import { Mail, User, MessageSquare, Send } from "lucide-react"
 import { Button } from "./button"
 import { Card, CardContent, CardHeader, CardTitle } from "./card"
-import { Mail, User, MessageSquare, Send } from "lucide-react"
 import { LoadingSpinner } from "./loading-spinner"
 
 interface FormData {
@@ -47,7 +47,7 @@ export function ContactForm() {
       
       setSubmitStatus("success")
       setFormData({ name: "", email: "", message: "" })
-    } catch (error) {
+    } catch {
       setSubmitStatus("error")
     } finally {
       setIsSubmitting(false)
