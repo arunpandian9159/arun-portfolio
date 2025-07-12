@@ -7,20 +7,42 @@ https://arun-portfolio-plum.vercel.app/
 
 ## 🚀 Features
 
+### Core Features
 - **Responsive Design:** Looks great on all devices (desktop, tablet, mobile)
 - **Animated UI:** Smooth transitions and interactive elements
 - **Skills Showcase:** Visual display of tech stack and soft skills
 - **Project Highlights:** Brief descriptions of key projects
 - **Education & Experience:** Academic background and achievements
-- **Contact Section:** Easy ways to get in touch
+- **Contact Section:** Easy ways to get in touch with interactive form
 - **Downloadable Resume:** Quick access to CV
+
+### Advanced Features
+- **Theme Toggle:** Dark/Light mode support
+- **Command Palette:** Quick navigation with keyboard shortcuts
+- **Search Functionality:** Find sections quickly with `/` key
+- **Scroll Progress:** Visual progress indicator
+- **Contact Form:** Interactive contact form with validation
+- **Error Boundary:** Graceful error handling
+- **Analytics Ready:** Built-in analytics tracking hooks
+- **Performance Optimized:** Image optimization, lazy loading, debouncing
+
+### Keyboard Shortcuts
+- `/` or `Ctrl+K`: Open search modal
+- `1-7`: Navigate to sections (Home, About, Education, etc.)
+- `h`, `a`, `e`, `p`, `s`, `c`: Quick section navigation
+- `t` or `Home`: Scroll to top
+- `b` or `End`: Scroll to bottom
+- `Esc`: Close modals
 
 ## 🛠️ Tech Stack
 
-- [Next.js](https://nextjs.org/)
-- [React](https://react.dev/)
-- [Tailwind CSS](https://tailwindcss.com/)
-- [Lucide Icons](https://lucide.dev/)
+- **Framework:** [Next.js 15](https://nextjs.org/) (App Router)
+- **Language:** TypeScript
+- **Styling:** [Tailwind CSS](https://tailwindcss.com/)
+- **UI Components:** Custom components with Radix UI primitives
+- **Icons:** [Lucide React](https://lucide.dev/)
+- **Animations:** CSS animations with Intersection Observer
+- **Performance:** Image optimization, lazy loading, debouncing
 
 ## 📁 Folder Structure
 
@@ -71,4 +93,4 @@ arun-portfolio/
 
 ---
 
-> © 2024 Arunpandian C. All rights reserved. Built with passion and creativity.
+> © 2025 Arunpandian C. All rights reserved. Built with passion and creativity.

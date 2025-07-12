@@ -375,14 +375,36 @@ html {
 
 .certificate-card img {
   transition: all 0.3s ease;
-  filter: brightness(0.9) contrast(1.1);
+  filter: brightness(1) contrast(1.05) saturate(1.1);
   width: 100%;
   height: 100%;
   object-fit: cover;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: high-quality;
+  image-rendering: auto;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+  will-change: transform;
 }
 
 .certificate-card:hover img {
-  filter: brightness(1) contrast(1.2);
+  filter: brightness(1.05) contrast(1.15) saturate(1.2);
+}
+
+/* High Quality Certificate Images */
+.certificate-image-hq {
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: -o-crisp-edges;
+  image-rendering: crisp-edges;
+  image-rendering: high-quality;
+  image-rendering: auto;
+  -ms-interpolation-mode: bicubic;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+  will-change: transform;
+  max-width: none;
+  max-height: none;
 }
 
 /* Staggered animation for certificate cards */
