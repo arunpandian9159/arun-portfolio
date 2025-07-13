@@ -534,3 +534,107 @@ html {
   outline-offset: 2px;
   border-radius: 4px;
 }
+
+/* 3D Carousel Styles - Matching Reference Code */
+.stage, .ring, .img {
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  user-select: none;
+}
+
+.stage {
+  overflow: visible;
+  position: relative;
+}
+
+/* Remove the global absolute positioning rule that conflicts with layout */
+
+.container {
+  perspective: 2000px;
+  width: 400px;
+  height: 500px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  position: relative;
+  overflow: visible;
+}
+
+/* Custom scrollbar for skill cards */
+.scrollbar-thin {
+  scrollbar-width: thin;
+}
+
+.scrollbar-thumb-white\/20 {
+  scrollbar-color: rgba(255, 255, 255, 0.2) transparent;
+}
+
+.scrollbar-track-transparent {
+  scrollbar-track-color: transparent;
+}
+
+/* Webkit scrollbar for skill cards */
+.scrollbar-thin::-webkit-scrollbar {
+  width: 4px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 2px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* Skill card visibility fixes */
+.skill-card {
+  min-opacity: 0.8 !important;
+  visibility: visible !important;
+  backface-visibility: visible !important;
+}
+
+.skill-card * {
+  visibility: visible !important;
+}
+
+/* Ensure minimum opacity for all carousel cards */
+.ring .img {
+  opacity: 0.9 !important;
+}
+
+.ring .img:hover {
+  opacity: 1 !important;
+}
+
+/* Force visibility for all 3D carousel elements */
+.stage, .ring, .img {
+  opacity: 1;
+  visibility: visible;
+}
+
+.img {
+  opacity: 0.9 !important;
+}
+
+/* Mobile optimizations for 3D carousel */
+@media (max-width: 768px) {
+  .container {
+    width: 300px;
+    height: 400px;
+    perspective: 1500px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    width: 280px;
+    height: 350px;
+    perspective: 1000px;
+  }
+}

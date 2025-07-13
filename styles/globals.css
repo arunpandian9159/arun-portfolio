@@ -92,3 +92,13 @@ body {
     @apply bg-background text-foreground;
   }
 }
+
+/* Remove focus outlines from carousel elements */
+.stage, .container, .ring, .img, .skill-card {
+  outline: none !important;
+}
+
+/* Remove focus outlines from interactive elements that shouldn't show them */
+*:focus:not(:focus-visible) {
+  outline: none;
+}

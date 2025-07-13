@@ -94,6 +94,12 @@ const config: Config = {
   		animation: {
   			'accordion-down': 'accordion-down 0.2s ease-out',
   			'accordion-up': 'accordion-up 0.2s ease-out'
+  		},
+  		perspective: {
+  			'2000': '2000px',
+  		},
+  		transformStyle: {
+  			'preserve-3d': 'preserve-3d',
   		}
   	}
   },
