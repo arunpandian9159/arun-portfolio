@@ -5,7 +5,6 @@ import { gsap } from "gsap"
 import { 
   Award, 
   Briefcase, 
-  User, 
   Code, 
   Palette, 
   Database, 
@@ -20,8 +19,8 @@ import {
   Target,
   Sparkles
 } from "lucide-react"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
+
 
 interface SkillCard {
   id: number
@@ -38,7 +37,7 @@ export function SkillsCarouselSection() {
   const ringRef = useRef<HTMLDivElement>(null)
   const autoRotateRef = useRef<NodeJS.Timeout | null>(null)
   const isHoveringRef = useRef(false)
-  let xPos = 0
+  const xPosRef = useRef(0)
 
   const technicalSkillsContent = (
     <div className="space-y-4">
@@ -401,7 +400,7 @@ export function SkillsCarouselSection() {
     }
 
     // Initialize GSAP timeline with improved visibility
-    const tl = gsap.timeline()
+    gsap.timeline()
       .set(ring, { rotationY: 0, cursor: 'grab' }) // Start at 0 instead of 180
       .set(cards, {
         rotateY: (i) => i * 90, // 4 cards, 90 degrees apart (positive rotation)
@@ -471,7 +470,7 @@ export function SkillsCarouselSection() {
     // Drag functionality exactly like the reference
     const dragStart = (e: MouseEvent | TouchEvent) => {
       const clientX = 'touches' in e ? e.touches[0].clientX : e.clientX
-      xPos = Math.round(clientX)
+      xPosRef.current = Math.round(clientX)
       isHoveringRef.current = true;
       stopAutoRotation();
       gsap.set(ring, { cursor: 'grabbing' })
@@ -482,7 +481,7 @@ export function SkillsCarouselSection() {
     const drag = (e: MouseEvent | TouchEvent) => {
       const clientX = 'touches' in e ? e.touches[0].clientX : e.clientX
       gsap.to(ring, {
-        rotationY: '-=' + ((Math.round(clientX) - xPos) % 360),
+        rotationY: '-=' + ((Math.round(clientX) - xPosRef.current) % 360),
         onUpdate: () => { 
           updateCardBlur();
           gsap.set(cards, { 
@@ -511,7 +510,7 @@ export function SkillsCarouselSection() {
           });
         }
       })
-      xPos = Math.round(clientX)
+      xPosRef.current = Math.round(clientX)
     }
 
     const dragEnd = () => {
@@ -599,10 +598,12 @@ export function SkillsCarouselSection() {
                   height: '100%', 
                   transformStyle: 'preserve-3d',
                   position: 'absolute',
-                  outline: 'none'
+                  outline: 'none !important',
+                  border: 'none !important',
+                  boxShadow: 'none !important'
                 }}
               >
-                {skillCards.map((card, index) => (
+                {skillCards.map((card) => (
                   <div
                     key={card.id}
                     className="img skill-card"
@@ -663,6 +664,7 @@ export function SkillsCarouselSection() {
           </div>
         </div>
       </div>
+
     </section>
   )
 }

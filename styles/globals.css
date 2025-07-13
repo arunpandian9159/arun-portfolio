@@ -96,6 +96,15 @@ body {
 /* Remove focus outlines from carousel elements */
 .stage, .container, .ring, .img, .skill-card {
   outline: none !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* Specific fix for the ring element */
+div.ring {
+  outline: none !important;
+  border: none !important;
+  box-shadow: none !important;
 }
 
 /* Remove focus outlines from interactive elements that shouldn't show them */
