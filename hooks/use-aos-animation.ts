@@ -4,41 +4,53 @@ import { useEffect } from "react"
 
 export function useAOSAnimation() {
   useEffect(() => {
-    const observerOptions = {
-      threshold: 0.1,
-      rootMargin: "0px 0px -50px 0px",
+    let hasAnimated = false;
+    let observer: IntersectionObserver | null = null;
+    let scrollListener: (() => void) | null = null;
+
+    function triggerAOSOnce() {
+      if (hasAnimated) return;
+      hasAnimated = true;
+      // Animate all elements with .aos-init
+      const elementsToAnimate = document.querySelectorAll(".aos-init");
+      elementsToAnimate.forEach((element, i) => {
+        setTimeout(() => {
+          element.classList.add("aos-animate");
+        }, i * 100);
+      });
+      // Disconnect observer if it exists
+      if (observer) observer.disconnect();
+      // Remove scroll listener
+      if (scrollListener) window.removeEventListener("scroll", scrollListener);
     }
 
-    const observer = new IntersectionObserver((entries) => {
+    // Only listen for the first scroll event
+    scrollListener = () => {
+      triggerAOSOnce();
+    };
+    window.addEventListener("scroll", scrollListener, { once: true });
+
+    // Optionally, if user lands mid-page, trigger on load if already scrolled
+    if (window.scrollY > 0) {
+      triggerAOSOnce();
+    }
+
+    // Set up observer for initial load (for progressive reveal if needed)
+    observer = new IntersectionObserver((entries) => {
+      if (hasAnimated) return;
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          // Add aos-animate class when element comes into view
-          entry.target.classList.add("aos-animate")
-
-          // Handle stagger children with dynamic timing
-          const children = entry.target.querySelectorAll(".aos-init:not(.aos-animate)")
-          children.forEach((child, index) => {
-            setTimeout(() => {
-              child.classList.add("aos-animate")
-            }, index * 150)
-          })
-        } else {
-          // Remove animation classes when element goes out of view for re-animation
-          entry.target.classList.remove("aos-animate")
-          const children = entry.target.querySelectorAll(".aos-animate")
-          children.forEach((child) => {
-            child.classList.remove("aos-animate")
-          })
+          entry.target.classList.add("aos-animate");
         }
-      })
-    }, observerOptions)
+      });
+    }, { threshold: 0.1, rootMargin: "0px 0px -50px 0px" });
 
-    // Observe all elements with aos-init class
-    const elementsToAnimate = document.querySelectorAll(".aos-init")
-    elementsToAnimate.forEach((element) => observer.observe(element))
+    const elementsToAnimate = document.querySelectorAll(".aos-init");
+    elementsToAnimate.forEach((element) => observer!.observe(element));
 
     return () => {
-      elementsToAnimate.forEach((element) => observer.unobserve(element))
-    }
-  }, [])
+      if (observer) observer.disconnect();
+      if (scrollListener) window.removeEventListener("scroll", scrollListener);
+    };
+  }, []);
 }
