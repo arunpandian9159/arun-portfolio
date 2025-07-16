@@ -2,16 +2,20 @@
 
 import { Code, Brain, Trophy, Award } from "lucide-react"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
 import React from "react"
+
+const skillTitles = [
+  "Technical Skills",
+  "Soft Skills",
+  "Achievements",
+  "Certifications"
+]
 
 export function SkillsSection() {
   // Card data (reuse from previous carousel)
   const skillCards = [
     {
       id: 1,
-      title: "Technical Skills",
-      icon: <Code className="w-6 h-6" />,
       content: (
         <div className="space-y-4">
           <div className="space-y-3">
@@ -19,21 +23,8 @@ export function SkillsSection() {
               <span><Code className="w-5 h-5" /></span>
               Frontend Development
             </h4>
-            <div className="flex flex-wrap gap-2">
-              {["HTML5", "CSS3", "JavaScript", "React.js", "Tailwind CSS"].map((name, i) => (
-                <Badge key={name} variant="outline" className="bg-white/10 border-white/20 text-white/90 hover:bg-white/20 transition-all duration-300">
-                  <span className={[
-                    "text-orange-400",
-                    "text-blue-400",
-                    "text-yellow-400",
-                    "text-cyan-400",
-                    "text-teal-400"
-                  ][i]}>
-                    <Code className="w-3 h-3" />
-                  </span>
-                  <span className="ml-1 text-xs">{name}</span>
-                </Badge>
-              ))}
+            <div className="pl-7 text-white/90 text-sm">
+              HTML5, CSS3, JavaScript, React.js, Tailwind CSS
             </div>
           </div>
           <div className="space-y-3">
@@ -41,21 +32,8 @@ export function SkillsSection() {
               <span><Code className="w-5 h-5" /></span>
               Backend Development
             </h4>
-            <div className="flex flex-wrap gap-2">
-              {["Node.js", "Express.js", "Python", "Supabase", "MongoDB"].map((name, i) => (
-                <Badge key={name} variant="outline" className="bg-white/10 border-white/20 text-white/90 hover:bg-white/20 transition-all duration-300">
-                  <span className={[
-                    "text-green-400",
-                    "text-gray-400",
-                    "text-blue-400",
-                    "text-green-400",
-                    "text-green-600"
-                  ][i]}>
-                    <Code className="w-3 h-3" />
-                  </span>
-                  <span className="ml-1 text-xs">{name}</span>
-                </Badge>
-              ))}
+            <div className="pl-7 text-white/90 text-sm">
+              Node.js, Express.js, Python, Supabase, MongoDB
             </div>
           </div>
         </div>
@@ -63,8 +41,6 @@ export function SkillsSection() {
     },
     {
       id: 2,
-      title: "Soft Skills",
-      icon: <Brain className="w-6 h-6" />,
       content: (
         <div className="space-y-4">
           <div className="space-y-3">
@@ -72,22 +48,8 @@ export function SkillsSection() {
               <Brain className="w-5 h-5" />
               Soft Skills
             </h4>
-            <div className="flex flex-wrap gap-2">
-              {["Problem Solving", "Communication", "Team Collaboration", "Adaptability", "Leadership", "Time Management"].map((name, i) => (
-                <Badge key={name} variant="outline" className="bg-white/10 border-white/20 text-white/90 hover:bg-white/20 transition-all duration-300">
-                  <span className={[
-                    "text-purple-400",
-                    "text-blue-400",
-                    "text-green-400",
-                    "text-yellow-400",
-                    "text-red-400",
-                    "text-orange-400"
-                  ][i]}>
-                    <Brain className="w-3 h-3" />
-                  </span>
-                  <span className="ml-1 text-xs">{name}</span>
-                </Badge>
-              ))}
+            <div className="pl-7 text-white/90 text-sm">
+              Problem Solving, Communication, Team Collaboration, Adaptability, Leadership, Time Management
             </div>
           </div>
           <div className="space-y-3">
@@ -95,22 +57,8 @@ export function SkillsSection() {
               <Code className="w-5 h-5" />
               Tools & Platforms
             </h4>
-            <div className="flex flex-wrap gap-2">
-              {["Git", "GitHub", "VS Code", "Postman", "Vercel", "Cursor"].map((name, i) => (
-                <Badge key={name} variant="outline" className="bg-white/10 border-white/20 text-white/90 hover:bg-white/20 transition-all duration-300">
-                  <span className={[
-                    "text-orange-400",
-                    "text-gray-400",
-                    "text-blue-400",
-                    "text-orange-400",
-                    "text-black",
-                    "text-purple-400"
-                  ][i]}>
-                    <Code className="w-3 h-3" />
-                  </span>
-                  <span className="ml-1 text-xs">{name}</span>
-                </Badge>
-              ))}
+            <div className="pl-7 text-white/90 text-sm">
+              Git, GitHub, VS Code, Postman, Vercel, Cursor
             </div>
           </div>
         </div>
@@ -118,8 +66,6 @@ export function SkillsSection() {
     },
     {
       id: 3,
-      title: "Achievements",
-      icon: <Trophy className="w-6 h-6" />,
       content: (
         <div className="space-y-4">
           <div className="space-y-3">
@@ -127,11 +73,8 @@ export function SkillsSection() {
               <Trophy className="w-5 h-5" />
               Professional Experience
             </h4>
-            <div className="space-y-2">
-              <Badge variant="outline" className="bg-white/10 border-white/20 text-white/90 hover:bg-white/20 transition-all duration-300 w-full justify-start">
-                <Trophy className="w-3 h-3 text-green-400" />
-                <span className="ml-2 text-xs">Frontend Development Intern - Tripmilestone Tours</span>
-              </Badge>
+            <div className="pl-7 text-white/90 text-sm">
+              Frontend Development Intern - Tripmilestone Tours
             </div>
           </div>
           <div className="space-y-3">
@@ -139,11 +82,8 @@ export function SkillsSection() {
               <Award className="w-5 h-5" />
               Academic Achievements
             </h4>
-            <div className="space-y-2">
-              <Badge variant="outline" className="bg-white/10 border-white/20 text-white/90 hover:bg-white/20 transition-all duration-300 w-full justify-start">
-                <Award className="w-3 h-3 text-yellow-400" />
-                <span className="ml-2 text-xs">Typewriting - Distinction (Senior)</span>
-              </Badge>
+            <div className="pl-7 text-white/90 text-sm">
+              Typewriting - Distinction (Senior)
             </div>
           </div>
           <div className="space-y-3">
@@ -151,13 +91,8 @@ export function SkillsSection() {
               <Trophy className="w-5 h-5" />
               Competitions
             </h4>
-            <div className="space-y-2">
-              {["ICT Learnathon 2023", "Skill-a-thon 2024"].map((title, i) => (
-                <Badge key={title} variant="outline" className="bg-white/10 border-white/20 text-white/90 hover:bg-white/20 transition-all duration-300 w-full justify-start">
-                  <Trophy className={`w-3 h-3 ${["text-blue-400", "text-purple-400"][i]}`} />
-                  <span className="ml-2 text-xs">{title}</span>
-                </Badge>
-              ))}
+            <div className="pl-7 text-white/90 text-sm">
+              ICT Learnathon 2023, Skill-a-thon 2024
             </div>
           </div>
         </div>
@@ -165,8 +100,6 @@ export function SkillsSection() {
     },
     {
       id: 4,
-      title: "Certifications",
-      icon: <Award className="w-6 h-6" />,
       content: (
         <div className="space-y-4">
           <div className="space-y-3">
@@ -174,13 +107,8 @@ export function SkillsSection() {
               <Award className="w-5 h-5" />
               Advanced Certifications
             </h4>
-            <div className="space-y-2">
-              {["Capgemini Fullstack Course", "Skill-a-thon 2024"].map((name, i) => (
-                <Badge key={name} variant="outline" className="bg-white/10 border-white/20 text-white/90 hover:bg-white/20 transition-all duration-300 w-full justify-start">
-                  <Award className={`w-3 h-3 ${["text-blue-400", "text-red-400"][i]}`} />
-                  <span className="ml-2 text-xs">{name}</span>
-                </Badge>
-              ))}
+            <div className="pl-7 text-white/90 text-sm">
+              Capgemini Fullstack Course, Skill-a-thon 2024
             </div>
           </div>
           <div className="space-y-3">
@@ -188,13 +116,8 @@ export function SkillsSection() {
               <Award className="w-5 h-5" />
               Intermediate Certifications
             </h4>
-            <div className="space-y-2">
-              {["ICT Learnathon 2023", "Python Certificate"].map((name, i) => (
-                <Badge key={name} variant="outline" className="bg-white/10 border-white/20 text-white/90 hover:bg-white/20 transition-all duration-300 w-full justify-start">
-                  <Award className={`w-3 h-3 ${["text-orange-400", "text-green-400"][i]}`} />
-                  <span className="ml-2 text-xs">{name}</span>
-                </Badge>
-              ))}
+            <div className="pl-7 text-white/90 text-sm">
+              ICT Learnathon 2023, Python Certificate
             </div>
           </div>
           <div className="space-y-3">
@@ -202,11 +125,8 @@ export function SkillsSection() {
               <Award className="w-5 h-5" />
               Professional Certifications
             </h4>
-            <div className="space-y-2">
-              <Badge variant="outline" className="bg-white/10 border-white/20 text-white/90 hover:bg-white/20 transition-all duration-300 w-full justify-start">
-                <Award className="w-3 h-3 text-cyan-400" />
-                <span className="ml-2 text-xs">Frontend Development Internship</span>
-              </Badge>
+            <div className="pl-7 text-white/90 text-sm">
+              Frontend Development Internship
             </div>
           </div>
         </div>
@@ -229,19 +149,20 @@ export function SkillsSection() {
             Explore my technical skills, soft skills, achievements, and certifications
           </p>
         </div>
+        <div className="flex justify-center gap-4 mb-8">
+          {skillTitles.map((title, i) => (
+            <div key={i} className="flex-1 text-center text-lg font-semibold text-purple-200">
+              {title}
+            </div>
+          ))}
+        </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 md:gap-8">
-          {skillCards.map((card) => (
+          {skillCards.map((card, i) => (
             <Card
-              key={card.id}
+              key={i}
               className="bg-white/5 backdrop-blur-md border-white/10 hover:bg-white/10 transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-purple-500/20 group cursor-pointer aos-init aos-animate"
               data-aos="fade-up"
             >
-              <CardHeader>
-                <CardTitle className="text-xl text-purple-300 group-hover:text-purple-200 transition-colors flex items-center gap-2">
-                  {card.icon}
-                  {card.title}
-                </CardTitle>
-              </CardHeader>
               <CardContent>
                 {card.content}
               </CardContent>
