@@ -51,7 +51,7 @@ export function OptimizedImage({
     <div className={`relative ${className}`}>
       {isLoading && (
         <div 
-          className="absolute inset-0 bg-gray-800 animate-pulse rounded-lg"
+          className="absolute inset-0 bg-transparent animate-pulse rounded-lg"
           style={{ width, height }}
         />
       )}
