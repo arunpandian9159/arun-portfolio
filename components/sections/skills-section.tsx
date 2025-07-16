@@ -1,8 +1,8 @@
 "use client"
 
+import React from "react"
 import { Code, Brain, Trophy, Award } from "lucide-react"
 import { Card, CardContent } from "@/components/ui/card"
-import React from "react"
 
 const skillTitles = [
   "Technical Skills",
