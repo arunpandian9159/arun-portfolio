@@ -12,6 +12,8 @@ import {
   Award,
   Menu,
   X,
+  Home as HomeIcon, // Add Home icon
+  Brain // Add Brain icon
 } from "lucide-react"
 import { OptimizedImage } from "@/components/ui/optimized-image"
 
@@ -23,11 +25,11 @@ interface NavigationProps {
 }
 
 const navItems = [
-  { id: "home", label: "Home", icon: User },
+  { id: "home", label: "Home", icon: HomeIcon }, // Use Home icon
   { id: "about", label: "About", icon: User },
   { id: "education", label: "Education", icon: GraduationCap },
   { id: "projects", label: "Projects", icon: Code },
-  { id: "skills", label: "Skills", icon: Award },
+  { id: "skills", label: "Skills", icon: Brain }, // Use Brain icon
   { id: "certificates", label: "Certificates", icon: Award },
   { id: "contact", label: "Contact", icon: Mail },
 ]
