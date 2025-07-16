@@ -14,7 +14,6 @@ import { ScrollProgress } from "@/components/ui/scroll-progress"
 import { BackToTop } from "@/components/ui/back-to-top"
 import { Analytics } from "@/components/ui/analytics"
 import { PerformanceMonitor } from "@/components/ui/performance-monitor"
-import { PWAInstall } from "@/components/ui/pwa-install"
 import { usePortfolioState } from "@/hooks/use-portfolio-state"
 import { useAOSAnimation } from "@/hooks/use-aos-animation"
 export default function Portfolio() {
@@ -55,9 +54,7 @@ export default function Portfolio() {
           <Footer />
         </main>
       </div>
-      
       <BackToTop />
-      <PWAInstall />
     </div>
   )
 }

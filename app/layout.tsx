@@ -3,6 +3,7 @@ import './globals.css'
 import { ErrorBoundary } from '@/components/ui/error-boundary'
 
 export const metadata: Metadata = {
+  metadataBase: new URL('http://localhost:3000'), // TODO: Change to your production domain
   title: 'Arunpandian C - Portfolio',
   description: 'Frontend Developer Portfolio - Arunpandian C',
   generator: 'Next.js',
