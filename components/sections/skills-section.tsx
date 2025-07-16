@@ -23,18 +23,26 @@ export function SkillsSection() {
               <span><Code className="w-5 h-5" /></span>
               Frontend Development
             </h4>
-            <div className="pl-7 text-white/90 text-sm">
-              HTML5, CSS3, JavaScript, React.js, Tailwind CSS
-            </div>
+            <ul className="pl-10 text-white/90 text-sm list-disc">
+              <li>HTML5</li>
+              <li>CSS3</li>
+              <li>JavaScript</li>
+              <li>React.js</li>
+              <li>Tailwind CSS</li>
+            </ul>
           </div>
           <div className="space-y-3">
             <h4 className="text-lg font-semibold text-pink-300 flex items-center gap-2">
               <span><Code className="w-5 h-5" /></span>
               Backend Development
             </h4>
-            <div className="pl-7 text-white/90 text-sm">
-              Node.js, Express.js, Python, Supabase, MongoDB
-            </div>
+            <ul className="pl-10 text-white/90 text-sm list-disc">
+              <li>Node.js</li>
+              <li>Express.js</li>
+              <li>Python</li>
+              <li>Supabase</li>
+              <li>MongoDB</li>
+            </ul>
           </div>
         </div>
       )
@@ -48,18 +56,28 @@ export function SkillsSection() {
               <Brain className="w-5 h-5" />
               Soft Skills
             </h4>
-            <div className="pl-7 text-white/90 text-sm">
-              Problem Solving, Communication, Team Collaboration, Adaptability, Leadership, Time Management
-            </div>
+            <ul className="pl-10 text-white/90 text-sm list-disc">
+              <li>Problem Solving</li>
+              <li>Communication</li>
+              <li>Team Collaboration</li>
+              <li>Adaptability</li>
+              <li>Leadership</li>
+              <li>Time Management</li>
+            </ul>
           </div>
           <div className="space-y-3">
             <h4 className="text-lg font-semibold text-pink-300 flex items-center gap-2">
               <Code className="w-5 h-5" />
               Tools & Platforms
             </h4>
-            <div className="pl-7 text-white/90 text-sm">
-              Git, GitHub, VS Code, Postman, Vercel, Cursor
-            </div>
+            <ul className="pl-10 text-white/90 text-sm list-disc">
+              <li>Git</li>
+              <li>GitHub</li>
+              <li>VS Code</li>
+              <li>Postman</li>
+              <li>Vercel</li>
+              <li>Cursor</li>
+            </ul>
           </div>
         </div>
       )
@@ -73,27 +91,28 @@ export function SkillsSection() {
               <Trophy className="w-5 h-5" />
               Professional Experience
             </h4>
-            <div className="pl-7 text-white/90 text-sm">
-              Frontend Development Intern - Tripmilestone Tours
-            </div>
+            <ul className="pl-10 text-white/90 text-sm list-disc">
+              <li>Frontend Development Intern - Tripmilestone Tours</li>
+            </ul>
           </div>
           <div className="space-y-3">
             <h4 className="text-lg font-semibold text-pink-300 flex items-center gap-2">
               <Award className="w-5 h-5" />
               Academic Achievements
             </h4>
-            <div className="pl-7 text-white/90 text-sm">
-              Typewriting - Distinction (Senior)
-            </div>
+            <ul className="pl-10 text-white/90 text-sm list-disc">
+              <li>Typewriting - Distinction (Senior)</li>
+            </ul>
           </div>
           <div className="space-y-3">
             <h4 className="text-lg font-semibold text-purple-400 flex items-center gap-2">
               <Trophy className="w-5 h-5" />
               Competitions
             </h4>
-            <div className="pl-7 text-white/90 text-sm">
-              ICT Learnathon 2023, Skill-a-thon 2024
-            </div>
+            <ul className="pl-10 text-white/90 text-sm list-disc">
+              <li>ICT Learnathon 2023</li>
+              <li>Skill-a-thon 2024</li>
+            </ul>
           </div>
         </div>
       )
@@ -107,27 +126,29 @@ export function SkillsSection() {
               <Award className="w-5 h-5" />
               Advanced Certifications
             </h4>
-            <div className="pl-7 text-white/90 text-sm">
-              Capgemini Fullstack Course, Skill-a-thon 2024
-            </div>
+            <ul className="pl-10 text-white/90 text-sm list-disc">
+              <li>Capgemini Fullstack Course</li>
+              <li>Skill-a-thon 2024</li>
+            </ul>
           </div>
           <div className="space-y-3">
             <h4 className="text-lg font-semibold text-pink-300 flex items-center gap-2">
               <Award className="w-5 h-5" />
               Intermediate Certifications
             </h4>
-            <div className="pl-7 text-white/90 text-sm">
-              ICT Learnathon 2023, Python Certificate
-            </div>
+            <ul className="pl-10 text-white/90 text-sm list-disc">
+              <li>ICT Learnathon 2023</li>
+              <li>Python Certificate</li>
+            </ul>
           </div>
           <div className="space-y-3">
             <h4 className="text-lg font-semibold text-purple-400 flex items-center gap-2">
               <Award className="w-5 h-5" />
               Professional Certifications
             </h4>
-            <div className="pl-7 text-white/90 text-sm">
-              Frontend Development Internship
-            </div>
+            <ul className="pl-10 text-white/90 text-sm list-disc">
+              <li>Frontend Development Internship</li>
+            </ul>
           </div>
         </div>
       )
