@@ -3,7 +3,6 @@
 import { Mail, Download, ChevronDown } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { SkillIcon } from "@/components/ui/skill-icon"
-import { InfiniteSkillsScroll } from "@/components/ui/infinite-skills-scroll"
 
 interface HeroSectionProps {
   scrollToSection: (sectionId: string) => void
@@ -28,17 +27,17 @@ export function HeroSection({ scrollToSection }: HeroSectionProps) {
         <div className="max-w-6xl mx-auto w-full">
           <div className="flex min-h-screen justify-center items-center py-8 sm:py-0">
             {/* Text Content */}
-            <div className="text-center w-full pt-20 sm:pt-32 md:pt-40">
-              <h1 className="text-2xl xs:text-3xl sm:text-5xl md:text-6xl lg:text-8xl font-extrabold mb-4 sm:mb-6 bg-gradient-to-r from-purple-400 via-pink-400 to-purple-400 bg-clip-text text-transparent leading-tight">
+            <div className="text-center w-full">
+              <h1 className="text-2xl xs:text-3xl sm:text-5xl md:text-6xl lg:text-8xl font-extrabold mb-4 sm:mb-6 bg-gradient-to-r from-purple-400 via-pink-400 to-purple-400 bg-clip-text text-transparent animate-pulse leading-tight">
                 ARUNPANDIAN C
               </h1>
               <div className="relative inline-block">
-                <p className="text-base xs:text-lg sm:text-2xl md:text-4xl text-purple-300 mb-6 sm:mb-8 font-semibold">
+                <p className="text-base xs:text-lg sm:text-2xl md:text-4xl text-purple-300 mb-6 sm:mb-8 animate-slideInLeft font-semibold">
                   I'm Frontend Developer
                 </p>
               </div>
 
-              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center">
+              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center animate-bounceIn px-4">
                 <Button
                   onClick={() => scrollToSection("contact")}
                   className="w-full sm:w-auto bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white px-8 sm:px-10 py-3 sm:py-4 rounded-full transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-purple-500/25 text-base sm:text-lg font-bold"
@@ -56,14 +55,18 @@ export function HeroSection({ scrollToSection }: HeroSectionProps) {
                 </Button>
               </div>
               
-              <div className="mt-20 sm:mt-28 md:mt-32 max-w-2xl mx-auto px-2">
+              <div className="mt-8 sm:mt-16 md:mt-20 max-w-6xl mx-auto px-2">
                 <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-6 sm:mb-8 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
                   Skills
                 </h2>
-                <InfiniteSkillsScroll skills={skills} />
+                <div className="flex flex-wrap justify-center items-center gap-4 sm:gap-6 md:gap-8 lg:gap-10">
+                  {skills.map((skill, index) => (
+                    <SkillIcon key={skill.name} skill={skill} index={index} />
+                  ))}
+                </div>
               </div>
               
-              <div className="mt-12 sm:mt-20 md:mt-32 lg:mt-40">
+              <div className="mt-12 sm:mt-20 md:mt-32 lg:mt-40 animate-bounce">
                 <ChevronDown
                   className="w-6 h-6 sm:w-8 sm:h-8 mx-auto text-purple-400 cursor-pointer hover:text-purple-300 transition-colors"
                   onClick={() => scrollToSection("about")}

@@ -190,25 +190,45 @@ body {
   }
 }
 
-.infinite-scroll-container {
-  overflow: hidden;
-  width: 100%;
-  position: relative;
+.animate-fadeInUp {
+  animation: fadeInUp 1s ease-out;
 }
 
-.infinite-scroll-track {
-  display: flex;
-  width: max-content;
-  animation: scroll-left 10s linear infinite;
+.animate-slideInLeft {
+  animation: slideInLeft 1s ease-out 0.2s both;
 }
 
-@keyframes scroll-left {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
+.animate-slideInRight {
+  animation: slideInRight 1s ease-out 0.4s both;
+}
+
+.animate-slideInFromLeft {
+  animation: slideInFromLeft 0.8s ease-out both;
+}
+
+.animate-moveLeftToRight {
+  animation: moveLeftToRight 3s ease-in-out infinite;
+}
+
+.animate-bounceIn {
+  animation: bounceIn 1s ease-out 0.6s both;
+}
+
+.animate-slideDown {
+  animation: slideDown 0.3s ease-out;
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-spin-slow {
+  animation: spin-slow 20s linear infinite;
+}
+
+.animate-spin3d {
+  animation: spin3d 4s ease-in-out infinite;
+  transform-style: preserve-3d;
 }
 
 /* Custom AOS-like animations */
@@ -617,70 +637,4 @@ html {
     height: 350px;
     perspective: 1000px;
   }
-}
-
-.scroll {
-    position: relative;
-    display: flex;
-    width: 700px;
-    overflow: hidden;
-    -webkit-mask-image: linear-gradient(90deg, transparent, #fff 20%, #fff 80%, transparent);
-    mask-image: linear-gradient(90deg, transparent, #fff 20%, #fff 80%, transparent);
-}
-
-.scroll div {
-    white-space: nowrap;
-    animation: scroll var(--time, 10s) linear infinite;
-    animation-delay: calc(var(--time, 10s)*-1);
-}
-
-.scroll div:nth-child(2) {
-    animation: scroll2 var(--time, 10s) linear infinite;
-    animation-delay: calc(var(--time, 10s)/-2);
-}
-
-@keyframes scroll {
-    0% {
-        transform: translateX(100%);
-    }
-    100% {
-        transform: translateX(-100%);
-    }
-}
-
-@keyframes scroll2 {
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        transform: translateX(-200%);
-    }
-}
-
-.scroll div span {
-    display: inline-flex;
-    margin: 10px;
-    letter-spacing: 0.2em;
-    background: #333;
-    color: #fff;
-    padding: 5px 10px;
-    border-radius: 5px;
-    transition: 0.5s;
-    align-items: center;
-}
-
-.scroll div span:hover {
-    background: #3fd2f9;
-    cursor: pointer;
-}
-
-.imgBox {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.imgBox img {
-    max-width: 100px;
-    scale: 0.8;
 }
