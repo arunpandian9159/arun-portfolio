@@ -90,25 +90,10 @@ const config: Config = {
   					height: '0'
   				}
   			},
-        'fade-in-up': {
-          '0%': { opacity: '0', transform: 'translateY(20px) scale(0.95)' },
-          '100%': { opacity: '1', transform: 'translateY(0) scale(1)' },
-        },
-        'float': {
-          '0%, 100%': { transform: 'translateX(0)' },
-          '50%': { transform: 'translateX(8px)' },
-        },
-        'slide-x': {
-          '0%, 100%': { transform: 'translateX(0)' },
-          '50%': { transform: 'translateX(20px)' },
-        },
   		},
   		animation: {
   			'accordion-down': 'accordion-down 0.2s ease-out',
   			'accordion-up': 'accordion-up 0.2s ease-out',
-        'fade-in-up': 'fade-in-up 0.6s cubic-bezier(0.22, 1, 0.36, 1) forwards',
-        'float': 'float 3s ease-in-out infinite',
-        'slide-x': 'slide-x 1.9s ease-in-out infinite',
   		},
   		perspective: {
   			'2000': '2000px',
