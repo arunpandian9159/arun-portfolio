@@ -14,7 +14,7 @@ interface SkillIconProps {
 export const SkillIcon = memo(function SkillIcon({ skill, index }: SkillIconProps) {
   return (
     <div
-      className="flex flex-col items-center group cursor-pointer hover:scale-110 transition-all duration-40 animate-fade-in-up animate-slide-x"
+      className="flex flex-col items-center group cursor-pointer hover:scale-110 transition-all duration-40"
       style={{
         animationDelay: `${index * 80}ms`, // Staggered entrance
         animationFillMode: "forwards",
