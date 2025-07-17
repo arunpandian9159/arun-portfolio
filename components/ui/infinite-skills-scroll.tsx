@@ -11,14 +11,26 @@ interface InfiniteSkillsScrollProps {
 }
 
 export function InfiniteSkillsScroll({ skills }: InfiniteSkillsScrollProps) {
-  // Duplicate the skills array for seamless looping
-  const skillList = [...skills, ...skills]
-
   return (
-    <div className="infinite-scroll-container">
-      <div className="infinite-scroll-track gap-8">
-        {skillList.map((skill, idx) => (
-          <SkillIcon key={skill.name + idx} skill={skill} index={idx} />
+    <div className="scroll mx-auto" style={{"--time": "10s"} as React.CSSProperties}>
+      <div>
+        {skills.map((skill, idx) => (
+          <span key={skill.name + idx}>
+            <span className="imgBox">
+              <img src={skill.icon} alt={skill.name} />
+            </span>
+            {skill.name}
+          </span>
+        ))}
+      </div>
+      <div>
+        {skills.map((skill, idx) => (
+          <span key={skill.name + "-dup-" + idx}>
+            <span className="imgBox">
+              <img src={skill.icon} alt={skill.name} />
+            </span>
+            {skill.name}
+          </span>
         ))}
       </div>
     </div>

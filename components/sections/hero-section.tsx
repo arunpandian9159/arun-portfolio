@@ -28,7 +28,7 @@ export function HeroSection({ scrollToSection }: HeroSectionProps) {
         <div className="max-w-6xl mx-auto w-full">
           <div className="flex min-h-screen justify-center items-center py-8 sm:py-0">
             {/* Text Content */}
-            <div className="text-center w-full">
+            <div className="text-center w-full pt-20 sm:pt-32 md:pt-40">
               <h1 className="text-2xl xs:text-3xl sm:text-5xl md:text-6xl lg:text-8xl font-extrabold mb-4 sm:mb-6 bg-gradient-to-r from-purple-400 via-pink-400 to-purple-400 bg-clip-text text-transparent leading-tight">
                 ARUNPANDIAN C
               </h1>
@@ -56,7 +56,7 @@ export function HeroSection({ scrollToSection }: HeroSectionProps) {
                 </Button>
               </div>
               
-              <div className="mt-8 sm:mt-16 md:mt-20 max-w-6xl mx-auto px-2">
+              <div className="mt-20 sm:mt-28 md:mt-32 max-w-2xl mx-auto px-2">
                 <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-6 sm:mb-8 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
                   Skills
                 </h2>
