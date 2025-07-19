@@ -4,13 +4,6 @@ import React from "react"
 import { Code, Brain, Trophy, Award } from "lucide-react"
 import { Card, CardContent } from "@/components/ui/card"
 
-const skillTitles = [
-  "Technical Skills",
-  "Soft Skills",
-  "Achievements",
-  "Certifications"
-]
-
 const cardAccents = [
   "from-purple-500 to-pink-500",
   "from-blue-500 to-cyan-500",
@@ -33,11 +26,11 @@ export function SkillsSection() {
       content: (
         <div className="space-y-6">
           <div className="space-y-2">
-            <h4 className="text-base font-semibold text-purple-300 flex items-center gap-2 mt-2">
+            <h4 className="text-lg font-semibold text-purple-300 flex items-center gap-2 mt-2">
               <Code className="w-5 h-5" />
               Frontend Development
             </h4>
-            <ul className="pl-8 text-white/90 text-sm list-disc">
+            <ul className="pl-8 text-white/90 text-base list-disc">
               <li>HTML5</li>
               <li>CSS3</li>
               <li>JavaScript</li>
@@ -46,11 +39,11 @@ export function SkillsSection() {
             </ul>
           </div>
           <div className="space-y-2">
-            <h4 className="text-base font-semibold text-pink-300 flex items-center gap-2">
+            <h4 className="text-lg font-semibold text-pink-300 flex items-center gap-2">
               <Code className="w-5 h-5" />
               Backend Development
             </h4>
-            <ul className="pl-8 text-white/90 text-sm list-disc">
+            <ul className="pl-8 text-white/90 text-base list-disc">
               <li>Node.js</li>
               <li>Express.js</li>
               <li>Python</li>
@@ -67,11 +60,11 @@ export function SkillsSection() {
       content: (
         <div className="space-y-6">
           <div className="space-y-2">
-            <h4 className="text-base font-semibold text-blue-300 flex items-center gap-2 mt-2">
+            <h4 className="text-lg font-semibold text-blue-300 flex items-center gap-2 mt-2">
               <Brain className="w-5 h-5" />
               Soft Skills
             </h4>
-            <ul className="pl-8 text-white/90 text-sm list-disc">
+            <ul className="pl-8 text-white/90 text-base list-disc">
               <li>Problem Solving</li>
               <li>Communication</li>
               <li>Team Collaboration</li>
@@ -80,11 +73,11 @@ export function SkillsSection() {
             </ul>
           </div>
           <div className="space-y-2">
-            <h4 className="text-base font-semibold text-cyan-300 flex items-center gap-2">
+            <h4 className="text-lg font-semibold text-cyan-300 flex items-center gap-2">
               <Code className="w-5 h-5" />
               Tools & Platforms
             </h4>
-            <ul className="pl-8 text-white/90 text-sm list-disc">
+            <ul className="pl-8 text-white/90 text-base list-disc">
               <li>Git</li>
               <li>GitHub</li>
               <li>VS Code</li>
@@ -102,29 +95,29 @@ export function SkillsSection() {
       content: (
         <div className="space-y-6">
           <div className="space-y-2">
-            <h4 className="text-base font-semibold text-green-300 flex items-center gap-2 mt-2">
+            <h4 className="text-lg font-semibold text-green-300 flex items-center gap-2 mt-2">
               <Trophy className="w-5 h-5" />
               Professional Experience
             </h4>
-            <ul className="pl-8 text-white/90 text-sm list-disc">
+            <ul className="pl-8 text-white/90 text-base list-disc">
               <li>Frontend Development Intern - Tripmilestone Tours</li>
             </ul>
           </div>
           <div className="space-y-2">
-            <h4 className="text-base font-semibold text-pink-300 flex items-center gap-2">
+            <h4 className="text-lg font-semibold text-pink-300 flex items-center gap-2">
               <Award className="w-5 h-5" />
               Academic Achievements
             </h4>
-            <ul className="pl-8 text-white/90 text-sm list-disc">
+            <ul className="pl-8 text-white/90 text-base list-disc">
               <li>Typewriting - Distinction (Senior)</li>
             </ul>
           </div>
           <div className="space-y-2">
-            <h4 className="text-base font-semibold text-purple-300 flex items-center gap-2">
+            <h4 className="text-lg font-semibold text-purple-300 flex items-center gap-2">
               <Trophy className="w-5 h-5" />
               Competitions
             </h4>
-            <ul className="pl-8 text-white/90 text-sm list-disc">
+            <ul className="pl-8 text-white/90 text-base list-disc">
               <li>ICT Learnathon 2023</li>
               <li>Skill-a-thon 2024</li>
             </ul>
@@ -138,31 +131,31 @@ export function SkillsSection() {
       content: (
         <div className="space-y-6">
           <div className="space-y-2">
-            <h4 className="text-base font-semibold text-yellow-300 flex items-center gap-2 mt-2">
+            <h4 className="text-lg font-semibold text-yellow-300 flex items-center gap-2 mt-2">
               <Award className="w-5 h-5" />
               Advanced Certifications
             </h4>
-            <ul className="pl-8 text-white/90 text-sm list-disc">
+            <ul className="pl-8 text-white/90 text-base list-disc">
               <li>Capgemini Fullstack Course</li>
               <li>Skill-a-thon 2024</li>
             </ul>
           </div>
           <div className="space-y-2">
-            <h4 className="text-base font-semibold text-pink-300 flex items-center gap-2">
+            <h4 className="text-lg font-semibold text-pink-300 flex items-center gap-2">
               <Award className="w-5 h-5" />
               Intermediate Certifications
             </h4>
-            <ul className="pl-8 text-white/90 text-sm list-disc">
+            <ul className="pl-8 text-white/90 text-base list-disc">
               <li>ICT Learnathon 2023</li>
               <li>Python Certificate</li>
             </ul>
           </div>
           <div className="space-y-2">
-            <h4 className="text-base font-semibold text-purple-400 flex items-center gap-2">
+            <h4 className="text-lg font-semibold text-purple-400 flex items-center gap-2">
               <Award className="w-5 h-5" />
               Professional Certifications
             </h4>
-            <ul className="pl-8 text-white/90 text-sm list-disc">
+            <ul className="pl-8 text-white/90 text-base list-disc">
               <li>Frontend Development Internship</li>
             </ul>
           </div>
@@ -186,12 +179,6 @@ export function SkillsSection() {
             Explore my technical skills, soft skills, achievements, and certifications
           </p>
         </div>
-        <div className="flex justify-center gap-4 mb-8">
-          {skillTitles.map((title, i) => (
-            <div key={i} className="flex-1 text-center text-lg font-semibold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-              {title}
-            </div>
-          ))}
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
           {skillCards.map((card, i) => (
@@ -213,7 +200,6 @@ export function SkillsSection() {
             </Card>
           ))}
         </div>
-      </div>
     </section>
   )
 }
