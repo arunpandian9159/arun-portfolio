@@ -37,20 +37,20 @@ export function HeroSection({ scrollToSection }: HeroSectionProps) {
                 </p>
               </div>
 
-              <div className="flex flex-col sm:flex-row gap-0.5 sm:gap-4 justify-center items-center animate-bounceIn px-0.5">
+              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center animate-bounceIn">
                 <Button
                   onClick={() => scrollToSection("contact")}
-                  className="w-full sm:w-auto bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white px-1 sm:px-10 py-1 sm:py-4 rounded-full transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-purple-500/25 text-[10px] sm:text-lg font-bold min-h-0 h-6 sm:h-auto"
+                  className="w-auto bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white px-4 sm:px-10 py-2 sm:py-4 rounded-full transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-purple-500/25 text-sm sm:text-lg font-bold"
                 >
-                  <Mail className="w-2.5 h-2.5 sm:w-6 sm:h-6 mr-0.5 sm:mr-3" />
+                  <Mail className="w-4 h-4 sm:w-6 sm:h-6 mr-2 sm:mr-3" />
                   Get In Touch
                 </Button>
                 <Button
                   variant="outline"
-                  className="w-full sm:w-auto border-purple-400 text-purple-300 hover:bg-purple-500/20 px-1 sm:px-10 py-1 sm:py-4 rounded-full transition-all duration-300 hover:scale-105 bg-transparent text-[10px] sm:text-lg font-bold min-h-0 h-6 sm:h-auto"
+                  className="w-auto border-purple-400 text-purple-300 hover:bg-purple-500/20 px-4 sm:px-10 py-2 sm:py-4 rounded-full transition-all duration-300 hover:scale-105 bg-transparent text-sm sm:text-lg font-bold"
                   onClick={() => window.open("/Resume.docx", "_blank")}
                 >
-                  <Download className="w-2.5 h-2.5 sm:w-6 sm:h-6 mr-0.5 sm:mr-3" />
+                  <Download className="w-4 h-4 sm:w-6 sm:h-6 mr-2 sm:mr-3" />
                   Download CV
                 </Button>
               </div>
