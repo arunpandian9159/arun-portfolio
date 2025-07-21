@@ -37,20 +37,20 @@ export function HeroSection({ scrollToSection }: HeroSectionProps) {
                 </p>
               </div>
 
-              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center animate-bounceIn">
+              <div className="flex flex-col sm:flex-row gap-2 sm:gap-3 justify-center items-center animate-bounceIn">
                 <Button
                   onClick={() => scrollToSection("contact")}
-                  className="w-auto bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white px-4 sm:px-10 py-2 sm:py-4 rounded-full transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-purple-500/25 text-sm sm:text-lg font-bold"
+                  className="w-auto bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white px-2 sm:px-4 py-1 sm:py-1.5 rounded-full transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-purple-500/25 text-xs sm:text-sm font-bold"
                 >
-                  <Mail className="w-4 h-4 sm:w-6 sm:h-6 mr-2 sm:mr-3" />
+                  <Mail className="w-3 h-3 sm:w-4 sm:h-4 mr-1.5" />
                   Get In Touch
                 </Button>
                 <Button
                   variant="outline"
-                  className="w-auto border-purple-400 text-purple-300 hover:bg-purple-500/20 px-4 sm:px-10 py-2 sm:py-4 rounded-full transition-all duration-300 hover:scale-105 bg-transparent text-sm sm:text-lg font-bold"
+                  className="w-auto border-purple-400 text-purple-300 hover:bg-purple-500/20 px-2 sm:px-4 py-1 sm:py-1.5 rounded-full transition-all duration-300 hover:scale-105 bg-transparent text-xs sm:text-sm font-bold"
                   onClick={() => window.open("/Resume.docx", "_blank")}
                 >
-                  <Download className="w-4 h-4 sm:w-6 sm:h-6 mr-2 sm:mr-3" />
+                  <Download className="w-3 h-3 sm:w-4 sm:h-4 mr-1.5" />
                   Download CV
                 </Button>
               </div>
