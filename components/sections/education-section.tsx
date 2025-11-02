@@ -10,7 +10,7 @@ const educationData = [
     duration: "Jul 2021 - Jun 2025",
     grade: "CGPA – 7.5", 
     location: "Puducherry", 
-  },
+  }, 
   { 
     institution: "Amalorpavam Higher Secondary School",
     degree: "Higher Secondary Course (HSC)",
