@@ -13,7 +13,7 @@ import { ContactSection } from "@/components/sections/contact-section"
 import { ScrollProgress } from "@/components/ui/scroll-progress"
 import { BackToTop } from "@/components/ui/back-to-top"
 import { Analytics } from "@/components/ui/analytics"
-import { PerformanceMonitor } from "@/components/ui/performance-monitor"
+import { PerformanceMonitor } from "@/components/ui/performance-monitor" 
 import { usePortfolioState } from "@/hooks/use-portfolio-state"
 import { useAOSAnimation } from "@/hooks/use-aos-animation"
 export default function Portfolio() {

@@ -9,7 +9,7 @@ const educationData = [
     degree: "Bachelor of Technology in CSE",
     duration: "Jul 2021 - Jun 2025",
     grade: "CGPA – 7.5",
-    location: "Puducherry",
+    location: "Puducherry", 
   },
   {
     institution: "Amalorpavam Higher Secondary School",

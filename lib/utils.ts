@@ -36,7 +36,7 @@ export const getStoredTheme = (): "light" | "dark" => {
 export const setStoredTheme = (theme: "light" | "dark") => {
   if (typeof window !== "undefined") {
     localStorage.setItem("theme", theme)
-  }
+  } 
 }
 
 // Form utilities

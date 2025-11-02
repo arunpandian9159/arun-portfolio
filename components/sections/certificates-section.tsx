@@ -9,7 +9,7 @@ const certificates = [
     title: "Capgemini Fullstack Training"
   },
   {
-    src: "/Learnathon.png",
+    src: "/Learnathon.png", 
     alt: "ICT Learnathon 2023 Certificate",
     title: "ICT Learnathon 2023"
   },

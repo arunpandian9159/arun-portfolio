@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: 'Arunpandian C - Portfolio',
   description: 'Frontend Developer Portfolio - Arunpandian C',
   generator: 'Next.js',
-  keywords: 'frontend developer, react, javascript, portfolio, web development, mobile responsive',
+  keywords: 'frontend developer, react, javascript, portfolio, web development, mobile responsive', 
   authors: [{ name: 'Arunpandian C' }],
   creator: 'Arunpandian C',
   openGraph: {
