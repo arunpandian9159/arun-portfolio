@@ -8,7 +8,7 @@ const educationData = [
     institution: "Manakula Vinayagar Institute of Technology",
     degree: "Bachelor of Technology in CSE",
     duration: "Jul 2021 - Jun 2025",
-    grade: "CGPA – 7.5",
+    grade: "CGPA – 7.5", 
     location: "Puducherry", 
   },
   { 
