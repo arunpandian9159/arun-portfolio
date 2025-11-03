@@ -24,7 +24,7 @@ const educationData = [
     duration: "2018 - 2019",
     grade: "Percentage - 82%",
     location: "Puducherry",
-  },
+  }, 
 ]
 
 export function EducationSection() {
