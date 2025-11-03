@@ -12,7 +12,7 @@ const projectsData = [
     title: "Vehicle Detection and Identification",
     description:
       "A system used to detect and identify vehicles, including number plate detection for security purposes.",
-    tech: ["Python"],
+    tech: ["Python"], 
     teamSize: 3,
   },
   {
