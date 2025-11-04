@@ -19,7 +19,7 @@ const educationData = [
     location: "Puducherry",
   },
   {
-    institution: "Amalorpavam Higher Secondary School",
+    institution: "Amalorpavam Higher Secondary School", 
     degree: "Secondary School Leaving Certificate (SSLC)",
     duration: "2018 - 2019",
     grade: "Percentage - 82%",
