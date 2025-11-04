@@ -6,7 +6,7 @@ import { Card, CardContent } from "@/components/ui/card"
 
 const cardAccents = [
   "from-purple-500 to-pink-500",
-  "from-blue-500 to-cyan-500",
+  "from-blue-500 to-cyan-500", 
   "from-green-500 to-emerald-500",
   "from-yellow-500 to-pink-500"
 ]
