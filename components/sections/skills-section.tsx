@@ -52,7 +52,7 @@ export function SkillsSection() {
             </ul>
           </div>
         </div>
-      )
+      ) 
     },
     {
       id: 2,
