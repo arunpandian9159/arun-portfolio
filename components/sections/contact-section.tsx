@@ -8,7 +8,7 @@ import { ContactForm } from "@/components/ui/contact-form"
 const contactData = [
   {
     icon: Phone,
-    label: "Phone",
+    label: "Phone", 
     value: "+91 8072396488",
     href: "tel:+918072396488",
     color: "text-green-400",
