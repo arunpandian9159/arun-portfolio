@@ -11,7 +11,7 @@ export function AboutSection() {
           About Me
         </h2> 
 
-        <div className="mb-8 sm:mb-12">
+        <div className="mb-8 sm:mb-12"> 
           <p className="text-base sm:text-lg text-white/90 leading-relaxed text-center max-w-4xl mx-auto px-4">
             I am an Frontend Developer with a strong foundation in effective communication principles and a
             passion for creating intuitive, user-centered designs. My goal is to enhance user understanding and
