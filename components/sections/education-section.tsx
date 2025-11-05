@@ -12,7 +12,7 @@ const educationData = [
     location: "Puducherry", 
   }, 
   { 
-    institution: "Amalorpavam Higher Secondary School",
+    institution: "Amalorpavam Higher Secondary School", 
     degree: "Higher Secondary Course (HSC)", 
     duration: "2020 - 2021",
     grade: "Percentage - 87%",
