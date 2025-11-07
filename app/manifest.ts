@@ -7,7 +7,7 @@ export default function manifest(): MetadataRoute.Manifest {
     description: 'Frontend Developer Portfolio showcasing skills, projects, and achievements',
     start_url: '/',
     display: 'standalone',
-    background_color: '#0f172a',
+    background_color: '#0f172a', 
     theme_color: '#8b5cf6',
     orientation: 'any',
     categories: ['portfolio', 'developer', 'frontend'], 
