@@ -11,7 +11,7 @@ export interface Skill {
 }
 
 // Education types
-export interface Education {
+ export interface Education {
   institution: string
   degree: string
   duration: string
