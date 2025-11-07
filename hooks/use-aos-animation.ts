@@ -3,7 +3,7 @@
 import { useEffect } from "react"
 
 export function useAOSAnimation() {
-  useEffect(() => {
+  useEffect(() => { 
     let hasAnimated = false;
     let observer: IntersectionObserver | null = null;
     let scrollListener: (() => void) | null = null;
