@@ -11,7 +11,7 @@ const navItems = [
   { id: "skills", label: "Skills" },
   { id: "certificates", label: "Certificates" },
   { id: "contact", label: "Contact" },
-]
+] 
 
 export function usePortfolioState() {
   const [activeSection, setActiveSection] = useState("home")
