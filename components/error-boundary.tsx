@@ -10,7 +10,7 @@ interface Props {
 interface State {
   hasError: boolean
   error?: Error
-}
+} 
 
 export class ErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
