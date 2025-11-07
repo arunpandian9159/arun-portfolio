@@ -8,7 +8,7 @@ export function AboutSection() {
     <section id="about" className="py-10 sm:py-16 md:py-20 px-2 sm:px-4 lg:px-8 section-title aos-init aos-animate" data-aos="fade-up">
       <div className="max-w-6xl mx-auto">
         <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-8 sm:mb-12 md:mb-16 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-          About Me
+          About Me 
         </h2> 
 
         <div className="mb-8 sm:mb-12"> 
