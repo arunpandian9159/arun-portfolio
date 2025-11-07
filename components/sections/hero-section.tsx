@@ -7,7 +7,7 @@ import { SkillIcon } from "@/components/ui/skill-icon"
 interface HeroSectionProps { 
   scrollToSection: (sectionId: string) => void
 }
-
+ 
 const skills = [ 
   { name: "HTML5", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" },
   { name: "CSS3", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" }, 
