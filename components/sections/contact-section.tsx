@@ -12,7 +12,7 @@ const contactData = [
     value: "+91 8072396488",
     href: "tel:+918072396488",
     color: "text-green-400",
-    bgColor: "hover:shadow-green-500/20",
+    bgColor: "hover:shadow-green-500/20", 
   },
   {
     icon: Mail,  
