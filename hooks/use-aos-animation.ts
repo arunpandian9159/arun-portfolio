@@ -18,7 +18,7 @@ export function useAOSAnimation() {
           element.classList.add("aos-animate");
         }, i * 100);
       });
-      // Disconnect observer if it exists
+      // Disconnect observer if it exists 
       if (observer) observer.disconnect();
       // Remove scroll listener
       if (scrollListener) window.removeEventListener("scroll", scrollListener);
