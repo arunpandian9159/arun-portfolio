@@ -17,7 +17,7 @@ const contactData = [
   {
     icon: Mail,  
     label: "Email",
-    value: "arunpandiancse25@gmail.com",
+    value: "arunpandiancse25@gmail.com", 
     href: "mailto:arunpandiancse25@gmail.com",
     color: "text-blue-400",
     bgColor: "hover:shadow-blue-500/20",
