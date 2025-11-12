@@ -54,7 +54,7 @@ export function SkillsSection() {
         </div>
       ) 
     },
-    {
+    { 
       id: 2,
       title: "Soft Skills",
       content: (
