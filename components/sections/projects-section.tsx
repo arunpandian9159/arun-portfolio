@@ -9,7 +9,7 @@ import { Badge } from "@/components/ui/badge"
 const projectsData = [
   {
     id: "vehicle-detection", 
-    title: "Vehicle Detection and Identification",
+    title: "Vehicle Detection and Identification", 
     description:
       "A system used to detect and identify vehicles, including number plate detection for security purposes.",
     tech: ["Python"], 
