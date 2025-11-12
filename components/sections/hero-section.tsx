@@ -19,7 +19,7 @@ const skills = [
   { name: "Postman", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postman/postman-original.svg" },
 ]
 
-export function HeroSection({ scrollToSection }: HeroSectionProps) {
+ export function HeroSection({ scrollToSection }: HeroSectionProps) {
   return (
     <section id="home" className="min-h-screen relative overflow-hidden">
       {/* Content Overlay */}
