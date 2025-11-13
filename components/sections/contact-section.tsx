@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { ContactForm } from "@/components/ui/contact-form"
 
-const contactData = [
+const contactData = [ 
   {
     icon: Phone,
     label: "Phone", 
