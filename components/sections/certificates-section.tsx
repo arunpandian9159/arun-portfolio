@@ -13,7 +13,7 @@ const certificates = [
     alt: "ICT Learnathon 2023 Certificate",
     title: "ICT Learnathon 2023"
   },
-  { 
+  {  
     src: "/Skill la thon.png",
     alt: "Skill-a-thon 2024 Certificate",  
     title: "UiPath Skill-a-thon 2024" 
