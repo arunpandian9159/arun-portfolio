@@ -50,7 +50,7 @@ export function SkillsSection() {
               <li>Supabase</li>
               <li>MongoDB</li>
             </ul>
-          </div> 
+          </div>  
         </div>
       ) 
     },
