@@ -14,7 +14,7 @@ const projectsData = [
       "A system used to detect and identify vehicles, including number plate detection for security purposes.",
     tech: ["Python"], 
     teamSize: 3, 
-  },
+  }, 
   {
     id: "nft-certification",
     title: "NFT Based Certification System for digital artwork using Polygon Blockchain",
