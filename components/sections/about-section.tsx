@@ -9,7 +9,7 @@ export function AboutSection() {
       <div className="max-w-6xl mx-auto">
         <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-8 sm:mb-12 md:mb-16 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
           About Me 
-        </h2>  
+        </h2>   
 
         <div className="mb-8 sm:mb-12"> 
           <p className="text-base sm:text-lg text-white/90 leading-relaxed text-center max-w-4xl mx-auto px-4">
