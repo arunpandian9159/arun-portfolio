@@ -41,7 +41,7 @@ export function SkillsSection() {
           <div className="space-y-2">
             <h4 className="text-xl font-semibold text-pink-300 flex items-center gap-2">
               <Code className="w-5 h-5" />
-              Backend Development
+              Backend Development 
             </h4>
             <ul className="pl-8 text-white/90 text-lg list-disc">
               <li>Node.js</li>
