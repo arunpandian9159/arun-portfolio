@@ -9,7 +9,7 @@ const contactData = [
   {
     icon: Phone,
     label: "Phone", 
-    value: "+91 8072396488",
+    value: "+91 8072396488", 
     href: "tel:+918072396488",
     color: "text-green-400",
     bgColor: "hover:shadow-green-500/20", 
