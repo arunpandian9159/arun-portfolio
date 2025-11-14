@@ -13,7 +13,7 @@ export function useAOSAnimation() {
       hasAnimated = true;
       // Animate all elements with .aos-init
       const elementsToAnimate = document.querySelectorAll(".aos-init");
-      elementsToAnimate.forEach((element, i) => {
+      elementsToAnimate.forEach((element, i) => { 
         setTimeout(() => {
           element.classList.add("aos-animate");
         }, i * 100);
