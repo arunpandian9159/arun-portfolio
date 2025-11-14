@@ -13,7 +13,7 @@ const educationData = [
   }, 
   { 
     institution: "Amalorpavam Higher Secondary School",  
-    degree: "Higher Secondary Course (HSC)", 
+    degree: "Higher Secondary Course (HSC)",  
     duration: "2020 - 2021", 
     grade: "Percentage - 87%", 
     location: "Puducherry",
